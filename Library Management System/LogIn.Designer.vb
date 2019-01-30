@@ -19,7 +19,7 @@ Partial Class LoginForm
 	Friend WithEvents PasswordLabel As System.Windows.Forms.Label
 	Friend WithEvents UsernameTextBox As System.Windows.Forms.TextBox
 	Friend WithEvents PasswordTextBox As System.Windows.Forms.TextBox
-	Friend WithEvents OK As System.Windows.Forms.Button
+	Friend WithEvents LoginButton As System.Windows.Forms.Button
 	Friend WithEvents Cancel As System.Windows.Forms.Button
 
 	'Required by the Windows Form Designer
@@ -30,28 +30,29 @@ Partial Class LoginForm
 	'Do not modify it using the code editor.
 	<System.Diagnostics.DebuggerStepThrough()> _
 	Private Sub InitializeComponent()
-		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
 		Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
 		Me.UsernameLabel = New System.Windows.Forms.Label()
 		Me.PasswordLabel = New System.Windows.Forms.Label()
 		Me.UsernameTextBox = New System.Windows.Forms.TextBox()
 		Me.PasswordTextBox = New System.Windows.Forms.TextBox()
-		Me.OK = New System.Windows.Forms.Button()
+		Me.LoginButton = New System.Windows.Forms.Button()
 		Me.Cancel = New System.Windows.Forms.Button()
 		CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.SuspendLayout()
 		'
 		'LogoPictureBox
 		'
-		Me.LogoPictureBox.Image = CType(resources.GetObject("LogoPictureBox.Image"), System.Drawing.Image)
-		Me.LogoPictureBox.Location = New System.Drawing.Point(0, 0)
+		Me.LogoPictureBox.Image = Global.Library_Management_System.My.Resources.Resources.logo_medium
+		Me.LogoPictureBox.Location = New System.Drawing.Point(3, 12)
 		Me.LogoPictureBox.Name = "LogoPictureBox"
-		Me.LogoPictureBox.Size = New System.Drawing.Size(165, 193)
+		Me.LogoPictureBox.Size = New System.Drawing.Size(165, 166)
+		Me.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
 		Me.LogoPictureBox.TabIndex = 0
 		Me.LogoPictureBox.TabStop = False
 		'
 		'UsernameLabel
 		'
+		Me.UsernameLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.UsernameLabel.Location = New System.Drawing.Point(172, 24)
 		Me.UsernameLabel.Name = "UsernameLabel"
 		Me.UsernameLabel.Size = New System.Drawing.Size(220, 23)
@@ -61,6 +62,7 @@ Partial Class LoginForm
 		'
 		'PasswordLabel
 		'
+		Me.PasswordLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.PasswordLabel.Location = New System.Drawing.Point(172, 81)
 		Me.PasswordLabel.Name = "PasswordLabel"
 		Me.PasswordLabel.Size = New System.Drawing.Size(220, 23)
@@ -87,17 +89,17 @@ Partial Class LoginForm
 		Me.PasswordTextBox.Size = New System.Drawing.Size(220, 20)
 		Me.PasswordTextBox.TabIndex = 3
 		'
-		'OK
+		'LoginButton
 		'
-		Me.OK.BackColor = System.Drawing.SystemColors.ActiveBorder
-		Me.OK.Cursor = System.Windows.Forms.Cursors.Hand
-		Me.OK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.OK.Location = New System.Drawing.Point(197, 161)
-		Me.OK.Name = "OK"
-		Me.OK.Size = New System.Drawing.Size(94, 23)
-		Me.OK.TabIndex = 4
-		Me.OK.Text = "&OK"
-		Me.OK.UseVisualStyleBackColor = False
+		Me.LoginButton.BackColor = System.Drawing.SystemColors.ActiveBorder
+		Me.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand
+		Me.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.LoginButton.Location = New System.Drawing.Point(197, 161)
+		Me.LoginButton.Name = "LoginButton"
+		Me.LoginButton.Size = New System.Drawing.Size(94, 23)
+		Me.LoginButton.TabIndex = 4
+		Me.LoginButton.Text = "&Login"
+		Me.LoginButton.UseVisualStyleBackColor = False
 		'
 		'Cancel
 		'
@@ -114,14 +116,14 @@ Partial Class LoginForm
 		'
 		'LoginForm
 		'
-		Me.AcceptButton = Me.OK
+		Me.AcceptButton = Me.LoginButton
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.SystemColors.ControlDark
 		Me.CancelButton = Me.Cancel
 		Me.ClientSize = New System.Drawing.Size(401, 192)
 		Me.Controls.Add(Me.Cancel)
-		Me.Controls.Add(Me.OK)
+		Me.Controls.Add(Me.LoginButton)
 		Me.Controls.Add(Me.PasswordTextBox)
 		Me.Controls.Add(Me.UsernameTextBox)
 		Me.Controls.Add(Me.PasswordLabel)

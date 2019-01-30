@@ -8,7 +8,7 @@ Public Class LoginForm
 	' Subsequently, My.User will return identity information encapsulated in the CustomPrincipal object
 	' such as the username, display name, etc.
 
-	Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
+	Private Sub LoginButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LoginButton.Click
 		Me.Close()
 	End Sub
 

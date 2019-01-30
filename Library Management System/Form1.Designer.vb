@@ -26,6 +26,7 @@ Partial Class Form1
 		Me.Button2 = New System.Windows.Forms.Button()
 		Me.Button3 = New System.Windows.Forms.Button()
 		Me.Label1 = New System.Windows.Forms.Label()
+		Me.Button4 = New System.Windows.Forms.Button()
 		Me.SuspendLayout()
 		'
 		'Button1
@@ -71,6 +72,18 @@ Partial Class Form1
 		Me.Label1.TabIndex = 1
 		Me.Label1.Text = "This is a temp form to test other forms"
 		'
+		'Button4
+		'
+		Me.Button4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.Button4.DialogResult = System.Windows.Forms.DialogResult.Cancel
+		Me.Button4.Location = New System.Drawing.Point(12, 60)
+		Me.Button4.Name = "Button4"
+		Me.Button4.Size = New System.Drawing.Size(150, 42)
+		Me.Button4.TabIndex = 0
+		Me.Button4.Text = "Normal Form"
+		Me.Button4.UseVisualStyleBackColor = True
+		'
 		'Form1
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -79,6 +92,7 @@ Partial Class Form1
 		Me.Controls.Add(Me.Label1)
 		Me.Controls.Add(Me.Button3)
 		Me.Controls.Add(Me.Button2)
+		Me.Controls.Add(Me.Button4)
 		Me.Controls.Add(Me.Button1)
 		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
 		Me.Name = "Form1"
@@ -93,4 +107,5 @@ Partial Class Form1
 	Friend WithEvents Button2 As Button
 	Friend WithEvents Button3 As Button
 	Friend WithEvents Label1 As Label
+	Friend WithEvents Button4 As Button
 End Class
