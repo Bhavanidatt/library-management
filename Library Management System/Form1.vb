@@ -12,6 +12,18 @@
 	End Sub
 
 	Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-		NormalForm.Show()
+		UserForm.Show()
+	End Sub
+
+	Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+		AccountSummaryForm.Show()
+	End Sub
+
+	Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+		AdminForm.Show()
+	End Sub
+
+	Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+		StartupForm.Show()
 	End Sub
 End Class

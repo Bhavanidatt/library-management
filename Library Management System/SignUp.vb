@@ -1,19 +1,26 @@
 Public Class SignUpForm
 
-	' TODO: Insert code to perform custom authentication using the provided username and password 
-	' (See https://go.microsoft.com/fwlink/?LinkId=35339).  
-	' The custom principal can then be attached to the current thread's principal as follows: 
-	'     My.User.CurrentPrincipal = CustomPrincipal
-	' where CustomPrincipal is the IPrincipal implementation used to perform authentication. 
-	' Subsequently, My.User will return identity information encapsulated in the CustomPrincipal object
-	' such as the username, display name, etc.
-
-	Private Sub Signup_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Signup.Click
+	Private Sub SignupButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SignupButton.Click
 		Me.Close()
 	End Sub
 
-	Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
+	Private Sub CancelButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CancelButton.Click
 		Me.Close()
 	End Sub
 
+	Private Sub DropDownButton_Click(sender As Object, e As EventArgs) Handles DropDownButton.Click
+		DropDown.Show(DropDownButton, -151, 25)
+	End Sub
+
+	Private Sub StudentAcc_Click(sender As Object, e As EventArgs) Handles StudentAcc.Click
+		SelectionTextBox.Text = "Student"
+	End Sub
+
+	Private Sub TeacherAcc_Click(sender As Object, e As EventArgs) Handles TeacherAcc.Click
+		SelectionTextBox.Text = "Teacher"
+	End Sub
+
+	Private Sub AdminAcc_Click(sender As Object, e As EventArgs) Handles AdminAcc.Click
+		SelectionTextBox.Text = "Admin"
+	End Sub
 End Class
