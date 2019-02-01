@@ -72,6 +72,14 @@ Public Class GLogin
                 BooksIssued = Integer.Parse(dt.Rows(0).Item(7).ToString())
                 Due = Decimal.Parse(dt.Rows(0).Item(8).ToString())
 
+                AccountSummaryForm.UsernameLabel.Text = Username
+                AccountSummaryForm.NameLabel.Text = Fullname
+                AccountSummaryForm.AccountTypeLabel.Text = AccType
+                AccountSummaryForm.DueLabel.Text = Due.ToString()
+                AccountSummaryForm.booksissued_label.Text = BooksIssued.ToString()
+                AccountSummaryForm.sex_label.Text = sex
+
+
             Else
                 MsgBox("Account does not exist.")
             End If
