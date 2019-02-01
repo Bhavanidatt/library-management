@@ -30,6 +30,8 @@ Partial Class Form1
 		Me.Button5 = New System.Windows.Forms.Button()
 		Me.Button6 = New System.Windows.Forms.Button()
 		Me.Button7 = New System.Windows.Forms.Button()
+		Me.Button8 = New System.Windows.Forms.Button()
+		Me.Button9 = New System.Windows.Forms.Button()
 		Me.SuspendLayout()
 		'
 		'Button1
@@ -92,7 +94,7 @@ Partial Class Form1
 		Me.Button4.Name = "Button4"
 		Me.Button4.Size = New System.Drawing.Size(150, 42)
 		Me.Button4.TabIndex = 2
-		Me.Button4.Text = "Normal Form"
+		Me.Button4.Text = "User Form"
 		Me.Button4.UseVisualStyleBackColor = False
 		'
 		'Button5
@@ -134,8 +136,35 @@ Partial Class Form1
 		Me.Button7.Text = "Startup Form"
 		Me.Button7.UseVisualStyleBackColor = False
 		'
+		'Button8
+		'
+		Me.Button8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.Button8.BackColor = System.Drawing.SystemColors.ActiveBorder
+		Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Button8.Location = New System.Drawing.Point(12, 159)
+		Me.Button8.Name = "Button8"
+		Me.Button8.Size = New System.Drawing.Size(150, 42)
+		Me.Button8.TabIndex = 4
+		Me.Button8.Text = "Edit Profile Form"
+		Me.Button8.UseVisualStyleBackColor = False
+		'
+		'Button9
+		'
+		Me.Button9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.Button9.BackColor = System.Drawing.SystemColors.ActiveBorder
+		Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Button9.Location = New System.Drawing.Point(164, 159)
+		Me.Button9.Name = "Button9"
+		Me.Button9.Size = New System.Drawing.Size(150, 42)
+		Me.Button9.TabIndex = 4
+		Me.Button9.Text = "View Book Form"
+		Me.Button9.UseVisualStyleBackColor = False
+		'
 		'Form1
 		'
+		Me.AcceptButton = Me.Button3
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
@@ -143,6 +172,8 @@ Partial Class Form1
 		Me.Controls.Add(Me.Label1)
 		Me.Controls.Add(Me.Button3)
 		Me.Controls.Add(Me.Button7)
+		Me.Controls.Add(Me.Button9)
+		Me.Controls.Add(Me.Button8)
 		Me.Controls.Add(Me.Button6)
 		Me.Controls.Add(Me.Button5)
 		Me.Controls.Add(Me.Button2)
@@ -165,4 +196,6 @@ Partial Class Form1
 	Friend WithEvents Button5 As Button
 	Friend WithEvents Button6 As Button
 	Friend WithEvents Button7 As Button
+	Friend WithEvents Button8 As Button
+	Friend WithEvents Button9 As Button
 End Class

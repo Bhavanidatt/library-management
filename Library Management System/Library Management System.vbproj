@@ -101,6 +101,7 @@
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GlobalVariables.vb" />
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -140,6 +141,12 @@
     <Compile Include="Startup.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ViewBook.Designer.vb">
+      <DependentUpon>ViewBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AccountSummary.resx">
@@ -171,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Startup.resx">
       <DependentUpon>Startup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewBook.resx">
+      <DependentUpon>ViewBook.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

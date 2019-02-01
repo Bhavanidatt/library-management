@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 <Global.System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1726")> _
-Partial Class EditProfile
+Partial Class EditProfileForm
 	Inherits System.Windows.Forms.Form
 
 	'Form overrides dispose to clean up the component list.
@@ -177,7 +177,7 @@ Partial Class EditProfile
 		Me.TextBox5.Text = "Student"
 		Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
 		'
-		'EditProfile
+		'EditProfileForm
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -199,7 +199,7 @@ Partial Class EditProfile
 		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
 		Me.MaximizeBox = False
 		Me.MinimizeBox = False
-		Me.Name = "EditProfile"
+		Me.Name = "EditProfileForm"
 		Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
 		Me.Text = "EditProfile"

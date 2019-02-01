@@ -1,3 +1,3 @@
-﻿Public Class Form2
+﻿Public Class ViewBookForm
 
 End Class
