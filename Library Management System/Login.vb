@@ -23,14 +23,17 @@ Public Class LoginForm
 				Return
 			End If
 		Next
+        GLogin.Username = UsernameTextBox.Text
+        GLogin.Password = PasswordTextBox.Text
+        SqlInterface.Login(GLogin.Username, GLogin.Password)
 
-		SqlInterface.Login()
+        If GLogin.LoggedIn = True Then
+            Me.Close()
+        ElseIf GLogin.LoggedIn = False Then
+            GLogin.Reset()
+        End If
 
-		If GLogin.LoggedIn = True Then
-			Me.Close()
-			Return
-		End If
-	End Sub
+    End Sub
 
 	Private Sub CancelBtn_Click(sender As Object, e As EventArgs) Handles CancelBtn.Click
 		GLogin.Reset()

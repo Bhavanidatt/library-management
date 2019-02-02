@@ -6,4 +6,8 @@
 		DueLabel.Text = GLogin.Due.ToString
 		BooksIssuedLabel.Text = GLogin.BooksIssued.ToString
 	End Sub
+
+    Private Sub AccountTypeLabel_Click(sender As Object, e As EventArgs) Handles AccountTypeLabel.Click
+
+    End Sub
 End Class
