@@ -1,4 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
+' I (Avneet) don't have mysql installed. So, Parvindar and Sachin have to do all backend testing.
+' Currently, one of the bugs I could find was SQL Injection in password.
+' To solve this vulnerability, I am thinking of hashing the password.
+' This will also safeguard user pass against thefts.
 Public Class SqlInterface
 
 	Public Shared con As MySqlConnection = New MySqlConnection("server=localhost; user id=root; password=root; database=library_management")
@@ -10,61 +14,58 @@ Public Class SqlInterface
 	Public Shared dt As New DataTable
 	Public Shared result As Integer
 
-    Public Shared Sub Login()
-        Try
-            con.Open()
-            With cmd
-                .Connection = con
-                .CommandText = "SELECT * FROM user WHERE email ='" & LoginForm.UsernameTextBox.Text & "' AND pass = '" & LoginForm.PasswordTextBox.Text & "'"
-            End With
-            'FILLING THE DATA IN A SPICIFIC TABLE OF THE DATABASE
-            da.SelectCommand = cmd
-            dt = New DataTable
-            da.Fill(dt)
-            'DECLARING AN INTEGER TO SET THE MAXROWS OF THE TABLE
-            Dim maxrow As Integer = dt.Rows.Count
-            'CHECKING IF THE DATA IS EXIST IN THE ROW OF THE TABLE
-            If maxrow > 0 Then
-                MsgBox("Welcome " & dt.Rows(0).Item(1).ToString())
-                GLogin.Username = LoginForm.UsernameTextBox.Text
-                GLogin.Password = LoginForm.PasswordTextBox.Text
-                GLogin.LoggedIn = True
-                GLogin.Fullname = dt.Rows(0).Item(1).ToString()
-                GLogin.AccType = dt.Rows(0).Item(4).ToString()
-                GLogin.lib_id = Integer.Parse(dt.Rows(0).Item(0).ToString())
-                GLogin.BooksIssued = Integer.Parse(dt.Rows(0).Item(5).ToString())
-                GLogin.Due = Integer.Parse(dt.Rows(0).Item(6).ToString())
+	Public Shared Function Login() As Boolean
+		' Function will return status of query ( because we may need it in our parent form)
+		If GLogin.LoggedIn = True Then
+			Return True
+		End If
+		Try
+			con.Open()
+			With cmd
+				.Connection = con
+				.CommandText = "SELECT * FROM user WHERE email ='" & GLogin.Username & "' AND pass = '" & GLogin.Password & "'"
+			End With
+			'FILLING THE DATA IN A SPICIFIC TABLE OF THE DATABASE
+			da.SelectCommand = cmd
+			dt = New DataTable
+			da.Fill(dt)
+			'DECLARING AN INTEGER TO SET THE MAXROWS OF THE TABLE
+			Dim maxrow As Integer = dt.Rows.Count
+			'CHECKING IF THE DATA IS EXIST IN THE ROW OF THE TABLE
+			If maxrow > 0 Then
+				GLogin.LoggedIn = True
+				GLogin.Fullname = dt.Rows(0).Item(1).ToString()
+				GLogin.AccType = dt.Rows(0).Item(4).ToString()
+				GLogin.lib_id = Integer.Parse(dt.Rows(0).Item(0).ToString())
+				GLogin.BooksIssued = Integer.Parse(dt.Rows(0).Item(5).ToString())
+				GLogin.Due = Integer.Parse(dt.Rows(0).Item(6).ToString())
 
-                '''''''''''''''''''''''''''''''' Do not edit form controls directly.''''''''''''''''''''''''''''''
-                '''''''''''''''''' Use GLogin to send info and do things inside form_load functions ''''''''''''''
-                '''''' Removed sqlQuery string, we do not need it because we are sending params using glogin '''
-                ''''''' Use the same idea in register '''''''
-                'AccountSummaryForm.UsernameLabel.Text = Username
-                'AccountSummaryForm.NameLabel.Text = Fullname
-                'AccountSummaryForm.AccountTypeLabel.Text = AccType
-                'AccountSummaryForm.DueLabel.Text = Due.ToString()
-                'AccountSummaryForm.BooksIssuedLabel.Text = BooksIssued.ToString()
-
-            Else
-                MsgBox("Account does not exist.")
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-        con.Close()
-    End Sub
+				'''''''''''''''''''''''''''''''' Do not edit form controls directly.''''''''''''''''''''''''''''''
+				'''''''''''''''''' Use GLogin to send info and do things inside form_load functions ''''''''''''''
+				'''''' Removed sqlQuery string, we do not need it because we are sending params using glogin '''
+				''''''' Use the same idea in register '''''''
+			Else
+				GLogin.LogOut()
+			End If
+		Catch ex As Exception
+			MsgBox(ex.Message)
+		End Try
+		con.Close()
+		Return GLogin.LoggedIn
+	End Function
 
 
-    Public Shared Sub Register()
+	Public Shared Function Register() As Boolean
+		' Function will return status of query ( because we may need it in our parent form)
 		Try
 			'OPENING THE CONNECTION
 			con.Open()
-            'HOLDS THE DATA TO BE EXECUTED
+			'HOLDS THE DATA TO BE EXECUTED
 
-            With cmd
+			With cmd
 				.Connection = con
-                .CommandText = "INSERT INTO user( name,email, pass,status,booksissued,due)" & "VALUES ('" & SignUpForm.FullnameTextBox.Text & "','" & SignUpForm.UsernameTextBox.Text & "','" & SignUpForm.PasswordTextBox.Text & "','" & SignUpForm.DropDownButton.Text & "',0,0)"
-            End With
+				.CommandText = "INSERT INTO user( name,email, pass,status,booksissued,due)" & "VALUES ('" & GLogin.Fullname & "','" & GLogin.Username & "','" & GLogin.Password & "','" & GLogin.AccType & "',0,0)"
+			End With
 			'EXECUTE THE DATA
 			result = cmd.ExecuteNonQuery
 			'CHECKING IF THE DATA HAS BEEN EXECUTED OR NOT
@@ -77,5 +78,10 @@ Public Class SqlInterface
 		Catch ex As Exception
 			MsgBox(ex.Message)
 		End Try
-	End Sub
+		If result > 0 Then
+			Return True
+		Else
+			Return False
+		End If
+	End Function
 End Class

@@ -23,35 +23,41 @@ Partial Class EditProfileForm
 	'Do not modify it using the code editor.
 	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
-		Me.TextBox1 = New System.Windows.Forms.TextBox()
+		Me.components = New System.ComponentModel.Container()
+		Me.UsernameTextBox = New System.Windows.Forms.TextBox()
 		Me.Label1 = New System.Windows.Forms.Label()
 		Me.Label2 = New System.Windows.Forms.Label()
 		Me.Label3 = New System.Windows.Forms.Label()
 		Me.Label4 = New System.Windows.Forms.Label()
-		Me.TextBox2 = New System.Windows.Forms.TextBox()
-		Me.TextBox3 = New System.Windows.Forms.TextBox()
-		Me.TextBox4 = New System.Windows.Forms.TextBox()
-		Me.EditButton = New System.Windows.Forms.Button()
-		Me.Button2 = New System.Windows.Forms.Button()
+		Me.FullnameTextBox = New System.Windows.Forms.TextBox()
+		Me.NewPasswordTextBox = New System.Windows.Forms.TextBox()
+		Me.ConfirmPasswordTextPassword = New System.Windows.Forms.TextBox()
+		Me.EditProfileButton = New System.Windows.Forms.Button()
+		Me.CancelButton = New System.Windows.Forms.Button()
 		Me.Label5 = New System.Windows.Forms.Label()
-		Me.Button3 = New System.Windows.Forms.Button()
+		Me.DropDownButton = New System.Windows.Forms.Button()
 		Me.GroupBox1 = New System.Windows.Forms.GroupBox()
 		Me.GroupBox2 = New System.Windows.Forms.GroupBox()
 		Me.Label6 = New System.Windows.Forms.Label()
-		Me.Button1 = New System.Windows.Forms.Button()
-		Me.TextBox6 = New System.Windows.Forms.TextBox()
+		Me.ChangePasswordButton = New System.Windows.Forms.Button()
+		Me.OldPasswordTextBox = New System.Windows.Forms.TextBox()
+		Me.DropDown = New System.Windows.Forms.ContextMenuStrip(Me.components)
+		Me.StudentAcc = New System.Windows.Forms.ToolStripMenuItem()
+		Me.TeacherAcc = New System.Windows.Forms.ToolStripMenuItem()
+		Me.AdminAcc = New System.Windows.Forms.ToolStripMenuItem()
 		Me.GroupBox1.SuspendLayout()
 		Me.GroupBox2.SuspendLayout()
+		Me.DropDown.SuspendLayout()
 		Me.SuspendLayout()
 		'
-		'TextBox1
+		'UsernameTextBox
 		'
-		Me.TextBox1.BackColor = System.Drawing.SystemColors.ActiveBorder
-		Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-		Me.TextBox1.Location = New System.Drawing.Point(65, 47)
-		Me.TextBox1.Name = "TextBox1"
-		Me.TextBox1.Size = New System.Drawing.Size(220, 20)
-		Me.TextBox1.TabIndex = 0
+		Me.UsernameTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder
+		Me.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+		Me.UsernameTextBox.Location = New System.Drawing.Point(65, 47)
+		Me.UsernameTextBox.Name = "UsernameTextBox"
+		Me.UsernameTextBox.Size = New System.Drawing.Size(220, 20)
+		Me.UsernameTextBox.TabIndex = 0
 		'
 		'Label1
 		'
@@ -89,63 +95,63 @@ Partial Class EditProfileForm
 		Me.Label4.Text = "&Retype New Password"
 		Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
-		'TextBox2
+		'FullnameTextBox
 		'
-		Me.TextBox2.BackColor = System.Drawing.SystemColors.ActiveBorder
-		Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-		Me.TextBox2.Location = New System.Drawing.Point(65, 101)
-		Me.TextBox2.Name = "TextBox2"
-		Me.TextBox2.Size = New System.Drawing.Size(220, 20)
-		Me.TextBox2.TabIndex = 1
+		Me.FullnameTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder
+		Me.FullnameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+		Me.FullnameTextBox.Location = New System.Drawing.Point(65, 101)
+		Me.FullnameTextBox.Name = "FullnameTextBox"
+		Me.FullnameTextBox.Size = New System.Drawing.Size(220, 20)
+		Me.FullnameTextBox.TabIndex = 1
 		'
-		'TextBox3
+		'NewPasswordTextBox
 		'
-		Me.TextBox3.BackColor = System.Drawing.SystemColors.ActiveBorder
-		Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-		Me.TextBox3.Location = New System.Drawing.Point(65, 99)
-		Me.TextBox3.Name = "TextBox3"
-		Me.TextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-		Me.TextBox3.Size = New System.Drawing.Size(220, 20)
-		Me.TextBox3.TabIndex = 2
-		Me.TextBox3.UseSystemPasswordChar = True
+		Me.NewPasswordTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder
+		Me.NewPasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+		Me.NewPasswordTextBox.Location = New System.Drawing.Point(65, 99)
+		Me.NewPasswordTextBox.Name = "NewPasswordTextBox"
+		Me.NewPasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+		Me.NewPasswordTextBox.Size = New System.Drawing.Size(220, 20)
+		Me.NewPasswordTextBox.TabIndex = 2
+		Me.NewPasswordTextBox.UseSystemPasswordChar = True
 		'
-		'TextBox4
+		'ConfirmPasswordTextPassword
 		'
-		Me.TextBox4.BackColor = System.Drawing.SystemColors.ActiveBorder
-		Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-		Me.TextBox4.Location = New System.Drawing.Point(65, 150)
-		Me.TextBox4.Name = "TextBox4"
-		Me.TextBox4.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-		Me.TextBox4.Size = New System.Drawing.Size(220, 20)
-		Me.TextBox4.TabIndex = 3
-		Me.TextBox4.UseSystemPasswordChar = True
+		Me.ConfirmPasswordTextPassword.BackColor = System.Drawing.SystemColors.ActiveBorder
+		Me.ConfirmPasswordTextPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+		Me.ConfirmPasswordTextPassword.Location = New System.Drawing.Point(65, 150)
+		Me.ConfirmPasswordTextPassword.Name = "ConfirmPasswordTextPassword"
+		Me.ConfirmPasswordTextPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+		Me.ConfirmPasswordTextPassword.Size = New System.Drawing.Size(220, 20)
+		Me.ConfirmPasswordTextPassword.TabIndex = 3
+		Me.ConfirmPasswordTextPassword.UseSystemPasswordChar = True
 		'
-		'EditButton
+		'EditProfileButton
 		'
-		Me.EditButton.AutoSize = True
-		Me.EditButton.BackColor = System.Drawing.SystemColors.ActiveBorder
-		Me.EditButton.Cursor = System.Windows.Forms.Cursors.Hand
-		Me.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.EditButton.Location = New System.Drawing.Point(123, 176)
-		Me.EditButton.Name = "EditButton"
-		Me.EditButton.Size = New System.Drawing.Size(105, 25)
-		Me.EditButton.TabIndex = 5
-		Me.EditButton.Text = "&Edit Profile"
-		Me.EditButton.UseVisualStyleBackColor = False
+		Me.EditProfileButton.AutoSize = True
+		Me.EditProfileButton.BackColor = System.Drawing.SystemColors.ActiveBorder
+		Me.EditProfileButton.Cursor = System.Windows.Forms.Cursors.Hand
+		Me.EditProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.EditProfileButton.Location = New System.Drawing.Point(123, 176)
+		Me.EditProfileButton.Name = "EditProfileButton"
+		Me.EditProfileButton.Size = New System.Drawing.Size(105, 25)
+		Me.EditProfileButton.TabIndex = 5
+		Me.EditProfileButton.Text = "&Edit Profile"
+		Me.EditProfileButton.UseVisualStyleBackColor = False
 		'
-		'Button2
+		'CancelButton
 		'
-		Me.Button2.AutoSize = True
-		Me.Button2.BackColor = System.Drawing.SystemColors.ActiveBorder
-		Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-		Me.Button2.DialogResult = System.Windows.Forms.DialogResult.Cancel
-		Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Button2.Location = New System.Drawing.Point(183, 494)
-		Me.Button2.Name = "Button2"
-		Me.Button2.Size = New System.Drawing.Size(94, 25)
-		Me.Button2.TabIndex = 6
-		Me.Button2.Text = "&Go Back"
-		Me.Button2.UseVisualStyleBackColor = False
+		Me.CancelButton.AutoSize = True
+		Me.CancelButton.BackColor = System.Drawing.SystemColors.ActiveBorder
+		Me.CancelButton.Cursor = System.Windows.Forms.Cursors.Hand
+		Me.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+		Me.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.CancelButton.Location = New System.Drawing.Point(183, 494)
+		Me.CancelButton.Name = "CancelButton"
+		Me.CancelButton.Size = New System.Drawing.Size(94, 25)
+		Me.CancelButton.TabIndex = 6
+		Me.CancelButton.Text = "&Go Back"
+		Me.CancelButton.UseVisualStyleBackColor = False
 		'
 		'Label5
 		'
@@ -157,29 +163,29 @@ Partial Class EditProfileForm
 		Me.Label5.TabIndex = 11
 		Me.Label5.Text = "I'm"
 		'
-		'Button3
+		'DropDownButton
 		'
-		Me.Button3.BackColor = System.Drawing.SystemColors.ActiveBorder
-		Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Button3.Location = New System.Drawing.Point(97, 141)
-		Me.Button3.Margin = New System.Windows.Forms.Padding(0)
-		Me.Button3.Name = "Button3"
-		Me.Button3.RightToLeft = System.Windows.Forms.RightToLeft.No
-		Me.Button3.Size = New System.Drawing.Size(182, 24)
-		Me.Button3.TabIndex = 4
-		Me.Button3.Text = "»"
-		Me.Button3.TextAlign = System.Drawing.ContentAlignment.TopCenter
-		Me.Button3.UseVisualStyleBackColor = False
+		Me.DropDownButton.BackColor = System.Drawing.SystemColors.ActiveBorder
+		Me.DropDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.DropDownButton.Location = New System.Drawing.Point(97, 141)
+		Me.DropDownButton.Margin = New System.Windows.Forms.Padding(0)
+		Me.DropDownButton.Name = "DropDownButton"
+		Me.DropDownButton.RightToLeft = System.Windows.Forms.RightToLeft.No
+		Me.DropDownButton.Size = New System.Drawing.Size(182, 24)
+		Me.DropDownButton.TabIndex = 4
+		Me.DropDownButton.Text = "AccType"
+		Me.DropDownButton.TextAlign = System.Drawing.ContentAlignment.TopCenter
+		Me.DropDownButton.UseVisualStyleBackColor = False
 		'
 		'GroupBox1
 		'
-		Me.GroupBox1.Controls.Add(Me.Button3)
-		Me.GroupBox1.Controls.Add(Me.TextBox1)
-		Me.GroupBox1.Controls.Add(Me.EditButton)
+		Me.GroupBox1.Controls.Add(Me.DropDownButton)
+		Me.GroupBox1.Controls.Add(Me.UsernameTextBox)
+		Me.GroupBox1.Controls.Add(Me.EditProfileButton)
 		Me.GroupBox1.Controls.Add(Me.Label5)
 		Me.GroupBox1.Controls.Add(Me.Label1)
 		Me.GroupBox1.Controls.Add(Me.Label2)
-		Me.GroupBox1.Controls.Add(Me.TextBox2)
+		Me.GroupBox1.Controls.Add(Me.FullnameTextBox)
 		Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.GroupBox1.Location = New System.Drawing.Point(55, 12)
 		Me.GroupBox1.Name = "GroupBox1"
@@ -193,10 +199,10 @@ Partial Class EditProfileForm
 		Me.GroupBox2.Controls.Add(Me.Label6)
 		Me.GroupBox2.Controls.Add(Me.Label3)
 		Me.GroupBox2.Controls.Add(Me.Label4)
-		Me.GroupBox2.Controls.Add(Me.Button1)
-		Me.GroupBox2.Controls.Add(Me.TextBox4)
-		Me.GroupBox2.Controls.Add(Me.TextBox6)
-		Me.GroupBox2.Controls.Add(Me.TextBox3)
+		Me.GroupBox2.Controls.Add(Me.ChangePasswordButton)
+		Me.GroupBox2.Controls.Add(Me.ConfirmPasswordTextPassword)
+		Me.GroupBox2.Controls.Add(Me.OldPasswordTextBox)
+		Me.GroupBox2.Controls.Add(Me.NewPasswordTextBox)
 		Me.GroupBox2.Location = New System.Drawing.Point(55, 266)
 		Me.GroupBox2.Name = "GroupBox2"
 		Me.GroupBox2.Size = New System.Drawing.Size(350, 222)
@@ -213,29 +219,55 @@ Partial Class EditProfileForm
 		Me.Label6.Text = "&Old Password"
 		Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
-		'Button1
+		'ChangePasswordButton
 		'
-		Me.Button1.AutoSize = True
-		Me.Button1.BackColor = System.Drawing.SystemColors.ActiveBorder
-		Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-		Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Button1.Location = New System.Drawing.Point(123, 179)
-		Me.Button1.Name = "Button1"
-		Me.Button1.Size = New System.Drawing.Size(105, 25)
-		Me.Button1.TabIndex = 5
-		Me.Button1.Text = "&Change Password"
-		Me.Button1.UseVisualStyleBackColor = False
+		Me.ChangePasswordButton.AutoSize = True
+		Me.ChangePasswordButton.BackColor = System.Drawing.SystemColors.ActiveBorder
+		Me.ChangePasswordButton.Cursor = System.Windows.Forms.Cursors.Hand
+		Me.ChangePasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.ChangePasswordButton.Location = New System.Drawing.Point(123, 179)
+		Me.ChangePasswordButton.Name = "ChangePasswordButton"
+		Me.ChangePasswordButton.Size = New System.Drawing.Size(105, 25)
+		Me.ChangePasswordButton.TabIndex = 5
+		Me.ChangePasswordButton.Text = "&Change Password"
+		Me.ChangePasswordButton.UseVisualStyleBackColor = False
 		'
-		'TextBox6
+		'OldPasswordTextBox
 		'
-		Me.TextBox6.BackColor = System.Drawing.SystemColors.ActiveBorder
-		Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-		Me.TextBox6.Location = New System.Drawing.Point(65, 45)
-		Me.TextBox6.Name = "TextBox6"
-		Me.TextBox6.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-		Me.TextBox6.Size = New System.Drawing.Size(220, 20)
-		Me.TextBox6.TabIndex = 2
-		Me.TextBox6.UseSystemPasswordChar = True
+		Me.OldPasswordTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder
+		Me.OldPasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+		Me.OldPasswordTextBox.Location = New System.Drawing.Point(65, 45)
+		Me.OldPasswordTextBox.Name = "OldPasswordTextBox"
+		Me.OldPasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+		Me.OldPasswordTextBox.Size = New System.Drawing.Size(220, 20)
+		Me.OldPasswordTextBox.TabIndex = 2
+		Me.OldPasswordTextBox.UseSystemPasswordChar = True
+		'
+		'DropDown
+		'
+		Me.DropDown.ImageScalingSize = New System.Drawing.Size(24, 24)
+		Me.DropDown.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StudentAcc, Me.TeacherAcc, Me.AdminAcc})
+		Me.DropDown.Name = "ContextMenuStrip1"
+		Me.DropDown.Size = New System.Drawing.Size(116, 70)
+		'
+		'StudentAcc
+		'
+		Me.StudentAcc.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+		Me.StudentAcc.Name = "StudentAcc"
+		Me.StudentAcc.Size = New System.Drawing.Size(180, 22)
+		Me.StudentAcc.Text = "&Student"
+		'
+		'TeacherAcc
+		'
+		Me.TeacherAcc.Name = "TeacherAcc"
+		Me.TeacherAcc.Size = New System.Drawing.Size(180, 22)
+		Me.TeacherAcc.Text = "&Teacher"
+		'
+		'AdminAcc
+		'
+		Me.AdminAcc.Name = "AdminAcc"
+		Me.AdminAcc.Size = New System.Drawing.Size(180, 22)
+		Me.AdminAcc.Text = "&Admin"
 		'
 		'EditProfileForm
 		'
@@ -245,7 +277,7 @@ Partial Class EditProfileForm
 		Me.ClientSize = New System.Drawing.Size(460, 526)
 		Me.Controls.Add(Me.GroupBox2)
 		Me.Controls.Add(Me.GroupBox1)
-		Me.Controls.Add(Me.Button2)
+		Me.Controls.Add(Me.CancelButton)
 		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
 		Me.MaximizeBox = False
 		Me.MinimizeBox = False
@@ -257,26 +289,31 @@ Partial Class EditProfileForm
 		Me.GroupBox1.PerformLayout()
 		Me.GroupBox2.ResumeLayout(False)
 		Me.GroupBox2.PerformLayout()
+		Me.DropDown.ResumeLayout(False)
 		Me.ResumeLayout(False)
 		Me.PerformLayout()
 
 	End Sub
 
-	Friend WithEvents TextBox1 As TextBox
+	Friend WithEvents UsernameTextBox As TextBox
 	Friend WithEvents Label1 As Label
 	Friend WithEvents Label2 As Label
 	Friend WithEvents Label3 As Label
 	Friend WithEvents Label4 As Label
-	Friend WithEvents TextBox2 As TextBox
-	Friend WithEvents TextBox3 As TextBox
-	Friend WithEvents TextBox4 As TextBox
-	Friend WithEvents Button2 As Button
+	Friend WithEvents FullnameTextBox As TextBox
+	Friend WithEvents NewPasswordTextBox As TextBox
+	Friend WithEvents ConfirmPasswordTextPassword As TextBox
+	Friend WithEvents CancelButton As Button
 	Friend WithEvents Label5 As Label
-	Friend WithEvents Button3 As Button
+	Friend WithEvents DropDownButton As Button
 	Friend WithEvents GroupBox1 As GroupBox
 	Friend WithEvents GroupBox2 As GroupBox
 	Friend WithEvents Label6 As Label
-	Friend WithEvents Button1 As Button
-	Friend WithEvents TextBox6 As TextBox
-	Private WithEvents EditButton As Button
+	Friend WithEvents ChangePasswordButton As Button
+	Friend WithEvents OldPasswordTextBox As TextBox
+	Private WithEvents EditProfileButton As Button
+	Friend WithEvents DropDown As ContextMenuStrip
+	Friend WithEvents StudentAcc As ToolStripMenuItem
+	Friend WithEvents TeacherAcc As ToolStripMenuItem
+	Friend WithEvents AdminAcc As ToolStripMenuItem
 End Class

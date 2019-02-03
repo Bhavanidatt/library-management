@@ -15,8 +15,8 @@ Partial Class LoginForm
 		End Try
 	End Sub
 	Friend WithEvents LogoPictureBox As System.Windows.Forms.PictureBox
-	Friend WithEvents UsernameLabel As System.Windows.Forms.Label
-	Friend WithEvents PasswordLabel As System.Windows.Forms.Label
+	Friend WithEvents Label1 As System.Windows.Forms.Label
+	Friend WithEvents Label2 As System.Windows.Forms.Label
 	Friend WithEvents UsernameTextBox As System.Windows.Forms.TextBox
 	Friend WithEvents PasswordTextBox As System.Windows.Forms.TextBox
     Friend WithEvents LoginButton As System.Windows.Forms.Button
@@ -31,8 +31,8 @@ Partial Class LoginForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
 		Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
-		Me.UsernameLabel = New System.Windows.Forms.Label()
-		Me.PasswordLabel = New System.Windows.Forms.Label()
+		Me.Label1 = New System.Windows.Forms.Label()
+		Me.Label2 = New System.Windows.Forms.Label()
 		Me.UsernameTextBox = New System.Windows.Forms.TextBox()
 		Me.PasswordTextBox = New System.Windows.Forms.TextBox()
 		Me.LoginButton = New System.Windows.Forms.Button()
@@ -50,25 +50,25 @@ Partial Class LoginForm
 		Me.LogoPictureBox.TabIndex = 0
 		Me.LogoPictureBox.TabStop = False
 		'
-		'UsernameLabel
+		'Label1
 		'
-		Me.UsernameLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.UsernameLabel.Location = New System.Drawing.Point(171, 25)
-		Me.UsernameLabel.Name = "UsernameLabel"
-		Me.UsernameLabel.Size = New System.Drawing.Size(220, 23)
-		Me.UsernameLabel.TabIndex = 4
-		Me.UsernameLabel.Text = "&User name"
-		Me.UsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Label1.Location = New System.Drawing.Point(171, 25)
+		Me.Label1.Name = "Label1"
+		Me.Label1.Size = New System.Drawing.Size(220, 23)
+		Me.Label1.TabIndex = 4
+		Me.Label1.Text = "&User name"
+		Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
-		'PasswordLabel
+		'Label2
 		'
-		Me.PasswordLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.PasswordLabel.Location = New System.Drawing.Point(171, 74)
-		Me.PasswordLabel.Name = "PasswordLabel"
-		Me.PasswordLabel.Size = New System.Drawing.Size(220, 23)
-		Me.PasswordLabel.TabIndex = 5
-		Me.PasswordLabel.Text = "&Password"
-		Me.PasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Label2.Location = New System.Drawing.Point(171, 74)
+		Me.Label2.Name = "Label2"
+		Me.Label2.Size = New System.Drawing.Size(220, 23)
+		Me.Label2.TabIndex = 5
+		Me.Label2.Text = "&Password"
+		Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
 		'UsernameTextBox
 		'
@@ -126,8 +126,8 @@ Partial Class LoginForm
 		Me.Controls.Add(Me.LoginButton)
 		Me.Controls.Add(Me.PasswordTextBox)
 		Me.Controls.Add(Me.UsernameTextBox)
-		Me.Controls.Add(Me.PasswordLabel)
-		Me.Controls.Add(Me.UsernameLabel)
+		Me.Controls.Add(Me.Label2)
+		Me.Controls.Add(Me.Label1)
 		Me.Controls.Add(Me.LogoPictureBox)
 		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
 		Me.MaximizeBox = False

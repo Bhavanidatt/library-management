@@ -9,7 +9,7 @@
 	Public Shared lib_id As Integer = 0
 	Public Shared LoggedIn As Boolean = False
 	'Public Shared ParentForm As String = ""
-	Public Shared Sub Reset()
+	Public Shared Sub LogOut()
 		Username = ""
 		Fullname = ""
 		Password = ""
@@ -17,7 +17,7 @@
 		Due = 0
 		BooksIssued = 0
 		lib_id = 0
-        LoggedIn = False
-        'ParentForm = ""
-    End Sub
+		LoggedIn = False
+		'ParentForm = ""
+	End Sub
 End Class

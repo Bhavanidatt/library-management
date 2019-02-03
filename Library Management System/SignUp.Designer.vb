@@ -38,9 +38,9 @@ Partial Class SignUpForm
 		Me.PasswordTextBox = New System.Windows.Forms.TextBox()
 		Me.FullnameTextBox = New System.Windows.Forms.TextBox()
 		Me.Label3 = New System.Windows.Forms.Label()
-		Me.PasswordLabel = New System.Windows.Forms.Label()
+		Me.Label5 = New System.Windows.Forms.Label()
 		Me.Label1 = New System.Windows.Forms.Label()
-		Me.UsernameLabel = New System.Windows.Forms.Label()
+		Me.Label4 = New System.Windows.Forms.Label()
 		Me.UsernameTextBox = New System.Windows.Forms.TextBox()
 		CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.DropDown.SuspendLayout()
@@ -173,14 +173,14 @@ Partial Class SignUpForm
 		Me.Label3.Text = "&Confirm Password"
 		Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
-		'PasswordLabel
+		'Label5
 		'
-		Me.PasswordLabel.Location = New System.Drawing.Point(170, 99)
-		Me.PasswordLabel.Name = "PasswordLabel"
-		Me.PasswordLabel.Size = New System.Drawing.Size(220, 23)
-		Me.PasswordLabel.TabIndex = 9
-		Me.PasswordLabel.Text = "&Password"
-		Me.PasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.Label5.Location = New System.Drawing.Point(170, 99)
+		Me.Label5.Name = "Label5"
+		Me.Label5.Size = New System.Drawing.Size(220, 23)
+		Me.Label5.TabIndex = 9
+		Me.Label5.Text = "&Password"
+		Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
 		'Label1
 		'
@@ -191,14 +191,14 @@ Partial Class SignUpForm
 		Me.Label1.Text = "&Full Name"
 		Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
-		'UsernameLabel
+		'Label4
 		'
-		Me.UsernameLabel.Location = New System.Drawing.Point(170, 11)
-		Me.UsernameLabel.Name = "UsernameLabel"
-		Me.UsernameLabel.Size = New System.Drawing.Size(220, 23)
-		Me.UsernameLabel.TabIndex = 7
-		Me.UsernameLabel.Text = "&Username"
-		Me.UsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.Label4.Location = New System.Drawing.Point(170, 11)
+		Me.Label4.Name = "Label4"
+		Me.Label4.Size = New System.Drawing.Size(220, 23)
+		Me.Label4.TabIndex = 7
+		Me.Label4.Text = "&Username"
+		Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
 		'UsernameTextBox
 		'
@@ -225,9 +225,9 @@ Partial Class SignUpForm
 		Me.Controls.Add(Me.FullnameTextBox)
 		Me.Controls.Add(Me.Label3)
 		Me.Controls.Add(Me.UsernameTextBox)
-		Me.Controls.Add(Me.PasswordLabel)
+		Me.Controls.Add(Me.Label5)
 		Me.Controls.Add(Me.Label1)
-		Me.Controls.Add(Me.UsernameLabel)
+		Me.Controls.Add(Me.Label4)
 		Me.Controls.Add(Me.LogoPictureBox)
 		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
 		Me.MaximizeBox = False
@@ -254,8 +254,8 @@ Partial Class SignUpForm
 	Friend WithEvents PasswordTextBox As TextBox
 	Friend WithEvents FullnameTextBox As TextBox
 	Friend WithEvents Label3 As Label
-	Friend WithEvents PasswordLabel As Label
+	Friend WithEvents Label5 As Label
 	Friend WithEvents Label1 As Label
-	Friend WithEvents UsernameLabel As Label
+	Friend WithEvents Label4 As Label
 	Friend WithEvents UsernameTextBox As TextBox
 End Class
