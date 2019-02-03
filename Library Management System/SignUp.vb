@@ -24,7 +24,7 @@ Public Class SignUpForm
 				Exit Sub
 			End If
 		Next
-		GLogin.Fullname = FullnameTextBox.Text
+		GLogin.Username = UsernameTextBox.Text
 		For Each C As Char In FullnameTextBox.Text
 			If AscW(C) >= AscW("a") AndAlso AscW("z") >= AscW(C) Then
 				Continue For
@@ -38,6 +38,7 @@ Public Class SignUpForm
 				Exit Sub
 			End If
 		Next
+		GLogin.Fullname = FullnameTextBox.Text
 		GLogin.Password = PasswordTextBox.Text
 		GLogin.AccType = DropDownButton.Text
 		SqlInterface.Register()

@@ -4,7 +4,7 @@ Public Class LoginForm
 
 
 		If UsernameTextBox.Text = "" Or PasswordTextBox.Text = "" Then
-			MessageBox.Show("Empty Inputs Found", "Username/Password fields can not be empty", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+			MessageBox.Show("Username/Password fields can not be empty", "Empty Inputs Found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 			GLogin.LogOut()
 			Exit Sub
 		End If
@@ -18,13 +18,13 @@ Public Class LoginForm
 			ElseIf AscW(C) = AscW("_") Then
 				Continue For
 			Else
-				MessageBox.Show("Invalid Characters in Username", "Use only alphanumerics( a-z or A-Z ) or underscores( _ )", MessageBoxButtons.OK, MessageBoxIcon.Error)
+				MessageBox.Show("Use only alphanumerics( a-z or A-Z ) or underscores( _ )", "Invalid Characters in Username", MessageBoxButtons.OK, MessageBoxIcon.Error)
 				GLogin.LogOut()
 				Exit Sub
 			End If
 		Next
 		If Len(UsernameTextBox.Text.Trim) < 6 Then
-			MessageBox.Show("Username too short", "Use atleast 6 digit username", MessageBoxButtons.OK, MessageBoxIcon.Error)
+			MessageBox.Show("Use atleast 6 digit username", "Username too short", MessageBoxButtons.OK, MessageBoxIcon.Error)
 			GLogin.LogOut()
 			Exit Sub
 		End If
@@ -35,7 +35,7 @@ Public Class LoginForm
 
 
 		If SqlInterface.Login() = True Then
-			MessageBox.Show("Logged In", "You have successfully logged in as" + GLogin.Fullname, MessageBoxButtons.OK, MessageBoxIcon.Information)
+			MessageBox.Show("You have successfully logged in as" + GLogin.Fullname, "Logged In", MessageBoxButtons.OK, MessageBoxIcon.Information)
 			Me.Close()
 		Else
 			MessageBox.Show("Incorrect Username/Password", "Username and Password do not match", MessageBoxButtons.OK, MessageBoxIcon.Error)

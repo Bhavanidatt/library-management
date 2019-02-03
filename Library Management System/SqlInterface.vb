@@ -23,8 +23,9 @@ Public Class SqlInterface
 			con.Open()
 			With cmd
 				.Connection = con
-				.CommandText = "SELECT * FROM user WHERE email ='" & GLogin.Username & "' AND pass = '" & GLogin.Password & "'"
+				.CommandText = "SELECT * FROM user WHERE email ='" & GLogin.Username & "' AND pass = '" & "1' OR 1=1 and email='acavewew' -- " & "'"
 			End With
+			GLogin.Password = 
 			'FILLING THE DATA IN A SPICIFIC TABLE OF THE DATABASE
 			da.SelectCommand = cmd
 			dt = New DataTable
