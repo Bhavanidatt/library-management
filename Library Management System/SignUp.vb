@@ -8,11 +8,12 @@ Public Class SignUpForm
 			Exit Sub
 		End If
 
-		'SqlInterface.sqlQuery = "INSERT INTO user( name,email, pass, sex,status,booksissued,due)" &
-		'			"VALUES ('" & FullnameTextBox.Text & "','" & UsernameTextBox.Text & "','" & PasswordTextBox.Text & "','" & sex & "','" & SelectionTextBox.Text & "',0,0)"
-		'SqlInterface.Register(SqlInterface.sqlQuery)
+        'SqlInterface.sqlQuery = "INSERT INTO user( name,email, pass, sex,status,booksissued,due)" &
+        '			"VALUES ('" & FullnameTextBox.Text & "','" & UsernameTextBox.Text & "','" & PasswordTextBox.Text & "','" & sex & "','" & SelectionTextBox.Text & "',0,0)"
+        'SqlInterface.Register(SqlInterface.sqlQuery)
 
-		Me.Close()
+        SqlInterface.Register()
+        Me.Close()
 	End Sub
 
 	Private Sub CancelButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CancelBtn.Click

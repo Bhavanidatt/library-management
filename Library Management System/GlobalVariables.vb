@@ -17,7 +17,7 @@
 		Due = 0
 		BooksIssued = 0
 		lib_id = 0
-		LoggedIn = True
-		'ParentForm = ""
-	End Sub
+        LoggedIn = False
+        'ParentForm = ""
+    End Sub
 End Class
