@@ -10,12 +10,12 @@ Public Class SqlInterface
 	Public Shared dt As New DataTable
 	Public Shared result As Integer
 
-    Public Shared Sub Login(ByVal user As String, ByVal pass As String)
+    Public Shared Sub Login()
         Try
             con.Open()
             With cmd
                 .Connection = con
-                .CommandText = "SELECT * FROM user WHERE email ='" & user & "' AND pass = '" & pass & "'"
+                .CommandText = "SELECT * FROM user WHERE email ='" & LoginForm.UsernameTextBox.Text & "' AND pass = '" & LoginForm.PasswordTextBox.Text & "'"
             End With
             'FILLING THE DATA IN A SPICIFIC TABLE OF THE DATABASE
             da.SelectCommand = cmd
@@ -26,6 +26,8 @@ Public Class SqlInterface
             'CHECKING IF THE DATA IS EXIST IN THE ROW OF THE TABLE
             If maxrow > 0 Then
                 MsgBox("Welcome " & dt.Rows(0).Item(1).ToString())
+                GLogin.Username = LoginForm.UsernameTextBox.Text
+                GLogin.Password = LoginForm.PasswordTextBox.Text
                 GLogin.LoggedIn = True
                 GLogin.Fullname = dt.Rows(0).Item(1).ToString()
                 GLogin.AccType = dt.Rows(0).Item(4).ToString()

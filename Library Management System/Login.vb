@@ -23,9 +23,7 @@ Public Class LoginForm
 				Return
 			End If
 		Next
-        GLogin.Username = UsernameTextBox.Text
-        GLogin.Password = PasswordTextBox.Text
-        SqlInterface.Login(GLogin.Username, GLogin.Password)
+        SqlInterface.Login()
 
         If GLogin.LoggedIn = True Then
             Me.Close()
