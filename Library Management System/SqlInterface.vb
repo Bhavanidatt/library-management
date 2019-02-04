@@ -33,25 +33,28 @@ Public Class SqlInterface
 			Dim maxrow As Integer = dt.Rows.Count
 			'CHECKING IF THE DATA IS EXIST IN THE ROW OF THE TABLE
 			If maxrow > 0 Then
-				GLogin.LoggedIn = True
-				GLogin.Fullname = dt.Rows(0).Item(1).ToString()
+                'GLogin.LoggedIn = True
+                GLogin.Fullname = dt.Rows(0).Item(1).ToString()
 				GLogin.PasswordHash = dt.Rows(0).Item(3).ToString()
 				GLogin.AccType = dt.Rows(0).Item(4).ToString()
 				GLogin.lib_id = Integer.Parse(dt.Rows(0).Item(0).ToString())
 				GLogin.BooksIssued = Integer.Parse(dt.Rows(0).Item(5).ToString())
 				GLogin.Due = Integer.Parse(dt.Rows(0).Item(6).ToString())
-				GLogin.Salt = dt.Rows(0).Item(7).ToString()
-			Else
+                GLogin.Salt = dt.Rows(0).Item(7).ToString()
+            Else
 				GLogin.LogOut()
 			End If
 		Catch ex As Exception
 			MsgBox(ex.Message)
 		End Try
 		con.Close()
-		If CheckOldPassword(GLogin.UnhashedPassword) = GLogin.PasswordHash Then
-			GLogin.LoggedIn = True
-		Else
-			GLogin.LogOut()
+        Dim temp As String = CheckOldPassword(GLogin.UnhashedPassword)
+        Console.WriteLine(temp)
+        Console.WriteLine(GLogin.PasswordHash)
+        If temp = GLogin.PasswordHash Then
+            GLogin.LoggedIn = True
+        Else
+            GLogin.LogOut()
 		End If
 		Return GLogin.LoggedIn
 	End Function
