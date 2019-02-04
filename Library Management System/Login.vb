@@ -31,7 +31,7 @@ Public Class LoginForm
 
 		GLogin.LogOut()
 		GLogin.Username = UsernameTextBox.Text
-		GLogin.PasswordHash = CheckOldPassword(PasswordTextBox.Text)
+		GLogin.UnhashedPassword = PasswordTextBox.Text 'CheckOldPassword(PasswordTextBox.Text)
 
 
 		If SqlInterface.Login() = True Then

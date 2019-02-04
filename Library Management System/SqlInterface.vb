@@ -23,7 +23,7 @@ Public Class SqlInterface
 			con.Open()
 			With cmd
 				.Connection = con
-				.CommandText = "SELECT * FROM user WHERE email ='" & GLogin.Username & "' AND pass = '" & GLogin.PasswordHash & "'"
+				.CommandText = "SELECT * FROM user WHERE email ='" & GLogin.Username & "'"
 			End With
 			'FILLING THE DATA IN A SPICIFIC TABLE OF THE DATABASE
 			da.SelectCommand = cmd
@@ -35,6 +35,7 @@ Public Class SqlInterface
 			If maxrow > 0 Then
 				GLogin.LoggedIn = True
 				GLogin.Fullname = dt.Rows(0).Item(1).ToString()
+				GLogin.PasswordHash = dt.Rows(0).Item(3).ToString()
 				GLogin.AccType = dt.Rows(0).Item(4).ToString()
 				GLogin.lib_id = Integer.Parse(dt.Rows(0).Item(0).ToString())
 				GLogin.BooksIssued = Integer.Parse(dt.Rows(0).Item(5).ToString())
@@ -47,6 +48,11 @@ Public Class SqlInterface
 			MsgBox(ex.Message)
 		End Try
 		con.Close()
+		If CheckOldPassword(GLogin.UnhashedPassword) = GLogin.PasswordHash Then
+			GLogin.LoggedIn = True
+		Else
+			GLogin.LogOut()
+		End If
 		Return GLogin.LoggedIn
 	End Function
 
