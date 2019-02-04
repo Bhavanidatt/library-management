@@ -11,7 +11,7 @@ Public Class LoginForm
 		For Each C As Char In UsernameTextBox.Text
 			If AscW(C) >= AscW("a") AndAlso AscW("z") >= AscW(C) Then
 				Continue For
-			ElseIf AscW(C) >= AscW("Z") AndAlso AscW("Z") >= AscW(C) Then
+			ElseIf AscW(C) >= AscW("A") AndAlso AscW("Z") >= AscW(C) Then
 				Continue For
 			ElseIf AscW(C) >= AscW("0") AndAlso AscW("9") >= AscW(C) Then
 				Continue For
