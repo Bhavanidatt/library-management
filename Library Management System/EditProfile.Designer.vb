@@ -54,44 +54,49 @@ Partial Class EditProfileForm
 		'
 		Me.UsernameTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder
 		Me.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-		Me.UsernameTextBox.Location = New System.Drawing.Point(65, 47)
+		Me.UsernameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.UsernameTextBox.Location = New System.Drawing.Point(32, 46)
 		Me.UsernameTextBox.Name = "UsernameTextBox"
 		Me.UsernameTextBox.Size = New System.Drawing.Size(220, 20)
 		Me.UsernameTextBox.TabIndex = 0
 		'
 		'Label1
 		'
-		Me.Label1.Location = New System.Drawing.Point(65, 17)
+		Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.Label1.Location = New System.Drawing.Point(32, 16)
 		Me.Label1.Name = "Label1"
 		Me.Label1.Size = New System.Drawing.Size(220, 23)
-		Me.Label1.TabIndex = 7
+		Me.Label1.TabIndex = 4
 		Me.Label1.Text = "&Username"
 		Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
 		'Label2
 		'
-		Me.Label2.Location = New System.Drawing.Point(65, 71)
+		Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.Label2.Location = New System.Drawing.Point(32, 70)
 		Me.Label2.Name = "Label2"
 		Me.Label2.Size = New System.Drawing.Size(220, 23)
-		Me.Label2.TabIndex = 8
+		Me.Label2.TabIndex = 5
 		Me.Label2.Text = "&Full Name"
 		Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
 		'Label3
 		'
-		Me.Label3.Location = New System.Drawing.Point(65, 72)
+		Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.Label3.Location = New System.Drawing.Point(31, 68)
 		Me.Label3.Name = "Label3"
 		Me.Label3.Size = New System.Drawing.Size(220, 23)
-		Me.Label3.TabIndex = 9
+		Me.Label3.TabIndex = 5
 		Me.Label3.Text = "&New Password"
 		Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
 		'Label4
 		'
-		Me.Label4.Location = New System.Drawing.Point(65, 127)
+		Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.Label4.Location = New System.Drawing.Point(31, 123)
 		Me.Label4.Name = "Label4"
 		Me.Label4.Size = New System.Drawing.Size(220, 23)
-		Me.Label4.TabIndex = 10
+		Me.Label4.TabIndex = 6
 		Me.Label4.Text = "&Retype New Password"
 		Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
@@ -99,7 +104,8 @@ Partial Class EditProfileForm
 		'
 		Me.FullnameTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder
 		Me.FullnameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-		Me.FullnameTextBox.Location = New System.Drawing.Point(65, 101)
+		Me.FullnameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.FullnameTextBox.Location = New System.Drawing.Point(32, 100)
 		Me.FullnameTextBox.Name = "FullnameTextBox"
 		Me.FullnameTextBox.Size = New System.Drawing.Size(220, 20)
 		Me.FullnameTextBox.TabIndex = 1
@@ -108,22 +114,24 @@ Partial Class EditProfileForm
 		'
 		Me.NewPasswordTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder
 		Me.NewPasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-		Me.NewPasswordTextBox.Location = New System.Drawing.Point(65, 99)
+		Me.NewPasswordTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.NewPasswordTextBox.Location = New System.Drawing.Point(31, 95)
 		Me.NewPasswordTextBox.Name = "NewPasswordTextBox"
 		Me.NewPasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
 		Me.NewPasswordTextBox.Size = New System.Drawing.Size(220, 20)
-		Me.NewPasswordTextBox.TabIndex = 2
+		Me.NewPasswordTextBox.TabIndex = 1
 		Me.NewPasswordTextBox.UseSystemPasswordChar = True
 		'
 		'ConfirmPasswordTextPassword
 		'
 		Me.ConfirmPasswordTextPassword.BackColor = System.Drawing.SystemColors.ActiveBorder
 		Me.ConfirmPasswordTextPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-		Me.ConfirmPasswordTextPassword.Location = New System.Drawing.Point(65, 150)
+		Me.ConfirmPasswordTextPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.ConfirmPasswordTextPassword.Location = New System.Drawing.Point(31, 146)
 		Me.ConfirmPasswordTextPassword.Name = "ConfirmPasswordTextPassword"
 		Me.ConfirmPasswordTextPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
 		Me.ConfirmPasswordTextPassword.Size = New System.Drawing.Size(220, 20)
-		Me.ConfirmPasswordTextPassword.TabIndex = 3
+		Me.ConfirmPasswordTextPassword.TabIndex = 2
 		Me.ConfirmPasswordTextPassword.UseSystemPasswordChar = True
 		'
 		'EditProfileButton
@@ -132,10 +140,11 @@ Partial Class EditProfileForm
 		Me.EditProfileButton.BackColor = System.Drawing.SystemColors.ActiveBorder
 		Me.EditProfileButton.Cursor = System.Windows.Forms.Cursors.Hand
 		Me.EditProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.EditProfileButton.Location = New System.Drawing.Point(123, 176)
+		Me.EditProfileButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.EditProfileButton.Location = New System.Drawing.Point(89, 175)
 		Me.EditProfileButton.Name = "EditProfileButton"
-		Me.EditProfileButton.Size = New System.Drawing.Size(105, 25)
-		Me.EditProfileButton.TabIndex = 5
+		Me.EditProfileButton.Size = New System.Drawing.Size(105, 28)
+		Me.EditProfileButton.TabIndex = 3
 		Me.EditProfileButton.Text = "&Edit Profile"
 		Me.EditProfileButton.UseVisualStyleBackColor = False
 		'
@@ -146,10 +155,10 @@ Partial Class EditProfileForm
 		Me.CancelButton.Cursor = System.Windows.Forms.Cursors.Hand
 		Me.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
 		Me.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.CancelButton.Location = New System.Drawing.Point(183, 494)
+		Me.CancelButton.Location = New System.Drawing.Point(250, 240)
 		Me.CancelButton.Name = "CancelButton"
 		Me.CancelButton.Size = New System.Drawing.Size(94, 25)
-		Me.CancelButton.TabIndex = 6
+		Me.CancelButton.TabIndex = 2
 		Me.CancelButton.Text = "&Go Back"
 		Me.CancelButton.UseVisualStyleBackColor = False
 		'
@@ -157,22 +166,23 @@ Partial Class EditProfileForm
 		'
 		Me.Label5.AutoSize = True
 		Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label5.Location = New System.Drawing.Point(64, 143)
+		Me.Label5.Location = New System.Drawing.Point(31, 140)
 		Me.Label5.Name = "Label5"
 		Me.Label5.Size = New System.Drawing.Size(30, 20)
-		Me.Label5.TabIndex = 11
+		Me.Label5.TabIndex = 6
 		Me.Label5.Text = "I'm"
 		'
 		'DropDownButton
 		'
 		Me.DropDownButton.BackColor = System.Drawing.SystemColors.ActiveBorder
 		Me.DropDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.DropDownButton.Location = New System.Drawing.Point(97, 141)
+		Me.DropDownButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.DropDownButton.Location = New System.Drawing.Point(64, 140)
 		Me.DropDownButton.Margin = New System.Windows.Forms.Padding(0)
 		Me.DropDownButton.Name = "DropDownButton"
 		Me.DropDownButton.RightToLeft = System.Windows.Forms.RightToLeft.No
 		Me.DropDownButton.Size = New System.Drawing.Size(182, 24)
-		Me.DropDownButton.TabIndex = 4
+		Me.DropDownButton.TabIndex = 2
 		Me.DropDownButton.Text = "AccType"
 		Me.DropDownButton.TextAlign = System.Drawing.ContentAlignment.TopCenter
 		Me.DropDownButton.UseVisualStyleBackColor = False
@@ -187,10 +197,11 @@ Partial Class EditProfileForm
 		Me.GroupBox1.Controls.Add(Me.Label2)
 		Me.GroupBox1.Controls.Add(Me.FullnameTextBox)
 		Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.GroupBox1.Location = New System.Drawing.Point(55, 12)
+		Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.GroupBox1.Location = New System.Drawing.Point(12, 15)
 		Me.GroupBox1.Name = "GroupBox1"
-		Me.GroupBox1.Size = New System.Drawing.Size(350, 219)
-		Me.GroupBox1.TabIndex = 13
+		Me.GroupBox1.Size = New System.Drawing.Size(282, 219)
+		Me.GroupBox1.TabIndex = 0
 		Me.GroupBox1.TabStop = False
 		Me.GroupBox1.Text = "Profile"
 		'
@@ -203,19 +214,21 @@ Partial Class EditProfileForm
 		Me.GroupBox2.Controls.Add(Me.ConfirmPasswordTextPassword)
 		Me.GroupBox2.Controls.Add(Me.OldPasswordTextBox)
 		Me.GroupBox2.Controls.Add(Me.NewPasswordTextBox)
-		Me.GroupBox2.Location = New System.Drawing.Point(55, 266)
+		Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.GroupBox2.Location = New System.Drawing.Point(300, 15)
 		Me.GroupBox2.Name = "GroupBox2"
-		Me.GroupBox2.Size = New System.Drawing.Size(350, 222)
-		Me.GroupBox2.TabIndex = 14
+		Me.GroupBox2.Size = New System.Drawing.Size(282, 219)
+		Me.GroupBox2.TabIndex = 1
 		Me.GroupBox2.TabStop = False
 		Me.GroupBox2.Text = "Password"
 		'
 		'Label6
 		'
-		Me.Label6.Location = New System.Drawing.Point(65, 18)
+		Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.Label6.Location = New System.Drawing.Point(31, 14)
 		Me.Label6.Name = "Label6"
 		Me.Label6.Size = New System.Drawing.Size(220, 23)
-		Me.Label6.TabIndex = 9
+		Me.Label6.TabIndex = 4
 		Me.Label6.Text = "&Old Password"
 		Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
@@ -225,10 +238,11 @@ Partial Class EditProfileForm
 		Me.ChangePasswordButton.BackColor = System.Drawing.SystemColors.ActiveBorder
 		Me.ChangePasswordButton.Cursor = System.Windows.Forms.Cursors.Hand
 		Me.ChangePasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.ChangePasswordButton.Location = New System.Drawing.Point(123, 179)
+		Me.ChangePasswordButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.ChangePasswordButton.Location = New System.Drawing.Point(74, 175)
 		Me.ChangePasswordButton.Name = "ChangePasswordButton"
-		Me.ChangePasswordButton.Size = New System.Drawing.Size(105, 25)
-		Me.ChangePasswordButton.TabIndex = 5
+		Me.ChangePasswordButton.Size = New System.Drawing.Size(134, 29)
+		Me.ChangePasswordButton.TabIndex = 3
 		Me.ChangePasswordButton.Text = "&Change Password"
 		Me.ChangePasswordButton.UseVisualStyleBackColor = False
 		'
@@ -236,11 +250,12 @@ Partial Class EditProfileForm
 		'
 		Me.OldPasswordTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder
 		Me.OldPasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-		Me.OldPasswordTextBox.Location = New System.Drawing.Point(65, 45)
+		Me.OldPasswordTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.OldPasswordTextBox.Location = New System.Drawing.Point(31, 41)
 		Me.OldPasswordTextBox.Name = "OldPasswordTextBox"
 		Me.OldPasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
 		Me.OldPasswordTextBox.Size = New System.Drawing.Size(220, 20)
-		Me.OldPasswordTextBox.TabIndex = 2
+		Me.OldPasswordTextBox.TabIndex = 0
 		Me.OldPasswordTextBox.UseSystemPasswordChar = True
 		'
 		'DropDown
@@ -254,19 +269,19 @@ Partial Class EditProfileForm
 		'
 		Me.StudentAcc.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
 		Me.StudentAcc.Name = "StudentAcc"
-		Me.StudentAcc.Size = New System.Drawing.Size(180, 22)
+		Me.StudentAcc.Size = New System.Drawing.Size(115, 22)
 		Me.StudentAcc.Text = "&Student"
 		'
 		'TeacherAcc
 		'
 		Me.TeacherAcc.Name = "TeacherAcc"
-		Me.TeacherAcc.Size = New System.Drawing.Size(180, 22)
+		Me.TeacherAcc.Size = New System.Drawing.Size(115, 22)
 		Me.TeacherAcc.Text = "&Teacher"
 		'
 		'AdminAcc
 		'
 		Me.AdminAcc.Name = "AdminAcc"
-		Me.AdminAcc.Size = New System.Drawing.Size(180, 22)
+		Me.AdminAcc.Size = New System.Drawing.Size(115, 22)
 		Me.AdminAcc.Text = "&Admin"
 		'
 		'EditProfileForm
@@ -274,7 +289,7 @@ Partial Class EditProfileForm
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-		Me.ClientSize = New System.Drawing.Size(460, 526)
+		Me.ClientSize = New System.Drawing.Size(595, 273)
 		Me.Controls.Add(Me.GroupBox2)
 		Me.Controls.Add(Me.GroupBox1)
 		Me.Controls.Add(Me.CancelButton)

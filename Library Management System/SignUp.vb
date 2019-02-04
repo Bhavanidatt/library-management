@@ -1,5 +1,4 @@
 
-
 Public Class SignUpForm
 	Private Shared DropDownActive As Boolean = False
 	Private Sub SignupButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SignupButton.Click
@@ -39,7 +38,7 @@ Public Class SignUpForm
 			End If
 		Next
 		GLogin.Fullname = FullnameTextBox.Text
-		GLogin.Password = PasswordTextBox.Text
+		GLogin.PasswordHash = EncryptNewPassword(PasswordTextBox.Text)
 		GLogin.AccType = DropDownButton.Text
 		SqlInterface.Register()
 		Me.Close()

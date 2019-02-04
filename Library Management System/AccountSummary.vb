@@ -7,8 +7,13 @@
 			DueLabel.Text = GLogin.Due.ToString
 			BooksIssuedLabel.Text = GLogin.BooksIssued.ToString
 		Else
-			MessageBox.Show("Not Logged In", "You are not Logged in! Logic error in form", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+			MessageBox.Show("You are not Logged in! Logic error in form", "Not Logged In", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 			MyBase.Close()
 		End If
+	End Sub
+
+	Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+		EditProfileForm.Show()
+		MyBase.Close()
 	End Sub
 End Class

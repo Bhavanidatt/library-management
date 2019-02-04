@@ -68,7 +68,7 @@ Partial Class Form1
 		Me.Button3.Location = New System.Drawing.Point(164, 256)
 		Me.Button3.Name = "Button3"
 		Me.Button3.Size = New System.Drawing.Size(150, 42)
-		Me.Button3.TabIndex = 6
+		Me.Button3.TabIndex = 8
 		Me.Button3.Text = "Exit"
 		Me.Button3.UseVisualStyleBackColor = False
 		'
@@ -80,7 +80,7 @@ Partial Class Form1
 		Me.Label1.Location = New System.Drawing.Point(30, 314)
 		Me.Label1.Name = "Label1"
 		Me.Label1.Size = New System.Drawing.Size(266, 16)
-		Me.Label1.TabIndex = 7
+		Me.Label1.TabIndex = 9
 		Me.Label1.Text = "This is a temp form to test other forms"
 		'
 		'Button4
@@ -145,7 +145,7 @@ Partial Class Form1
 		Me.Button8.Location = New System.Drawing.Point(12, 159)
 		Me.Button8.Name = "Button8"
 		Me.Button8.Size = New System.Drawing.Size(150, 42)
-		Me.Button8.TabIndex = 4
+		Me.Button8.TabIndex = 6
 		Me.Button8.Text = "Edit Profile Form"
 		Me.Button8.UseVisualStyleBackColor = False
 		'
@@ -158,7 +158,7 @@ Partial Class Form1
 		Me.Button9.Location = New System.Drawing.Point(164, 159)
 		Me.Button9.Name = "Button9"
 		Me.Button9.Size = New System.Drawing.Size(150, 42)
-		Me.Button9.TabIndex = 4
+		Me.Button9.TabIndex = 7
 		Me.Button9.Text = "View Book Form"
 		Me.Button9.UseVisualStyleBackColor = False
 		'

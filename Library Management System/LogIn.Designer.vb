@@ -43,7 +43,7 @@ Partial Class LoginForm
 		'LogoPictureBox
 		'
 		Me.LogoPictureBox.Image = Global.Library_Management_System.My.Resources.Resources.logo_medium
-		Me.LogoPictureBox.Location = New System.Drawing.Point(4, 13)
+		Me.LogoPictureBox.Location = New System.Drawing.Point(11, 13)
 		Me.LogoPictureBox.Name = "LogoPictureBox"
 		Me.LogoPictureBox.Size = New System.Drawing.Size(165, 166)
 		Me.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -53,7 +53,7 @@ Partial Class LoginForm
 		'Label1
 		'
 		Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Label1.Location = New System.Drawing.Point(171, 25)
+		Me.Label1.Location = New System.Drawing.Point(187, 22)
 		Me.Label1.Name = "Label1"
 		Me.Label1.Size = New System.Drawing.Size(220, 23)
 		Me.Label1.TabIndex = 4
@@ -63,7 +63,7 @@ Partial Class LoginForm
 		'Label2
 		'
 		Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Label2.Location = New System.Drawing.Point(171, 74)
+		Me.Label2.Location = New System.Drawing.Point(187, 71)
 		Me.Label2.Name = "Label2"
 		Me.Label2.Size = New System.Drawing.Size(220, 23)
 		Me.Label2.TabIndex = 5
@@ -74,7 +74,7 @@ Partial Class LoginForm
 		'
 		Me.UsernameTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder
 		Me.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-		Me.UsernameTextBox.Location = New System.Drawing.Point(174, 51)
+		Me.UsernameTextBox.Location = New System.Drawing.Point(190, 48)
 		Me.UsernameTextBox.Name = "UsernameTextBox"
 		Me.UsernameTextBox.Size = New System.Drawing.Size(220, 20)
 		Me.UsernameTextBox.TabIndex = 0
@@ -83,7 +83,7 @@ Partial Class LoginForm
 		'
 		Me.PasswordTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder
 		Me.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-		Me.PasswordTextBox.Location = New System.Drawing.Point(174, 100)
+		Me.PasswordTextBox.Location = New System.Drawing.Point(190, 97)
 		Me.PasswordTextBox.Name = "PasswordTextBox"
 		Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
 		Me.PasswordTextBox.Size = New System.Drawing.Size(220, 20)
@@ -95,7 +95,7 @@ Partial Class LoginForm
 		Me.LoginButton.BackColor = System.Drawing.SystemColors.ActiveBorder
 		Me.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand
 		Me.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.LoginButton.Location = New System.Drawing.Point(187, 145)
+		Me.LoginButton.Location = New System.Drawing.Point(203, 142)
 		Me.LoginButton.Name = "LoginButton"
 		Me.LoginButton.Size = New System.Drawing.Size(94, 23)
 		Me.LoginButton.TabIndex = 2
@@ -108,7 +108,7 @@ Partial Class LoginForm
 		Me.CancelBtn.Cursor = System.Windows.Forms.Cursors.Hand
 		Me.CancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel
 		Me.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.CancelBtn.Location = New System.Drawing.Point(287, 145)
+		Me.CancelBtn.Location = New System.Drawing.Point(303, 142)
 		Me.CancelBtn.Name = "CancelBtn"
 		Me.CancelBtn.Size = New System.Drawing.Size(94, 23)
 		Me.CancelBtn.TabIndex = 3
@@ -121,7 +121,7 @@ Partial Class LoginForm
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.SystemColors.ControlDark
-		Me.ClientSize = New System.Drawing.Size(401, 192)
+		Me.ClientSize = New System.Drawing.Size(420, 192)
 		Me.Controls.Add(Me.CancelBtn)
 		Me.Controls.Add(Me.LoginButton)
 		Me.Controls.Add(Me.PasswordTextBox)

@@ -23,9 +23,8 @@ Public Class SqlInterface
 			con.Open()
 			With cmd
 				.Connection = con
-				.CommandText = "SELECT * FROM user WHERE email ='" & GLogin.Username & "' AND pass = '" & "1' OR 1=1 and email='acavewew' -- " & "'"
+				.CommandText = "SELECT * FROM user WHERE email ='" & GLogin.Username & "' AND pass = '" & GLogin.PasswordHash & "'"
 			End With
-			GLogin.Password = 
 			'FILLING THE DATA IN A SPICIFIC TABLE OF THE DATABASE
 			da.SelectCommand = cmd
 			dt = New DataTable
@@ -40,11 +39,7 @@ Public Class SqlInterface
 				GLogin.lib_id = Integer.Parse(dt.Rows(0).Item(0).ToString())
 				GLogin.BooksIssued = Integer.Parse(dt.Rows(0).Item(5).ToString())
 				GLogin.Due = Integer.Parse(dt.Rows(0).Item(6).ToString())
-
-				'''''''''''''''''''''''''''''''' Do not edit form controls directly.''''''''''''''''''''''''''''''
-				'''''''''''''''''' Use GLogin to send info and do things inside form_load functions ''''''''''''''
-				'''''' Removed sqlQuery string, we do not need it because we are sending params using glogin '''
-				''''''' Use the same idea in register '''''''
+				GLogin.Salt = dt.Rows(0).Item(7).ToString()
 			Else
 				GLogin.LogOut()
 			End If
@@ -63,10 +58,10 @@ Public Class SqlInterface
 			con.Open()
 			'HOLDS THE DATA TO BE EXECUTED
 
-			With cmd
-				.Connection = con
-				.CommandText = "INSERT INTO user( name,email, pass,status,booksissued,due)" & "VALUES ('" & GLogin.Fullname & "','" & GLogin.Username & "','" & GLogin.Password & "','" & GLogin.AccType & "',0,0)"
-			End With
+
+			cmd.Connection = con
+			cmd.CommandText = "INSERT INTO user( name,email, pass,status,booksissued,due, salt)" & "VALUES ('" & GLogin.Fullname & "','" & GLogin.Username & "','" & GLogin.PasswordHash & "','" & GLogin.AccType & "',0,0,'" & GLogin.Salt & "')"
+
 			'EXECUTE THE DATA
 			result = cmd.ExecuteNonQuery
 			'CHECKING IF THE DATA HAS BEEN EXECUTED OR NOT

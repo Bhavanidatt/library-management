@@ -49,7 +49,7 @@ Partial Class SignUpForm
 		'LogoPictureBox
 		'
 		Me.LogoPictureBox.Image = Global.Library_Management_System.My.Resources.Resources.logo_medium
-		Me.LogoPictureBox.Location = New System.Drawing.Point(7, 45)
+		Me.LogoPictureBox.Location = New System.Drawing.Point(13, 45)
 		Me.LogoPictureBox.Name = "LogoPictureBox"
 		Me.LogoPictureBox.Size = New System.Drawing.Size(162, 165)
 		Me.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -86,9 +86,10 @@ Partial Class SignUpForm
 		'
 		Me.DropDownButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
 		Me.DropDownButton.BackColor = System.Drawing.SystemColors.ActiveBorder
+		Me.DropDownButton.Cursor = System.Windows.Forms.Cursors.Hand
 		Me.DropDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.DropDownButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.DropDownButton.Location = New System.Drawing.Point(290, 187)
+		Me.DropDownButton.Location = New System.Drawing.Point(313, 187)
 		Me.DropDownButton.Margin = New System.Windows.Forms.Padding(0)
 		Me.DropDownButton.Name = "DropDownButton"
 		Me.DropDownButton.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -102,7 +103,7 @@ Partial Class SignUpForm
 		'
 		Me.Label2.AutoSize = True
 		Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label2.Location = New System.Drawing.Point(179, 190)
+		Me.Label2.Location = New System.Drawing.Point(202, 190)
 		Me.Label2.Name = "Label2"
 		Me.Label2.Size = New System.Drawing.Size(106, 20)
 		Me.Label2.TabIndex = 11
@@ -114,7 +115,7 @@ Partial Class SignUpForm
 		Me.CancelBtn.Cursor = System.Windows.Forms.Cursors.Hand
 		Me.CancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel
 		Me.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.CancelBtn.Location = New System.Drawing.Point(290, 221)
+		Me.CancelBtn.Location = New System.Drawing.Point(313, 221)
 		Me.CancelBtn.Name = "CancelBtn"
 		Me.CancelBtn.Size = New System.Drawing.Size(94, 23)
 		Me.CancelBtn.TabIndex = 6
@@ -126,7 +127,7 @@ Partial Class SignUpForm
 		Me.SignupButton.BackColor = System.Drawing.SystemColors.ActiveBorder
 		Me.SignupButton.Cursor = System.Windows.Forms.Cursors.Hand
 		Me.SignupButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.SignupButton.Location = New System.Drawing.Point(190, 221)
+		Me.SignupButton.Location = New System.Drawing.Point(213, 221)
 		Me.SignupButton.Name = "SignupButton"
 		Me.SignupButton.Size = New System.Drawing.Size(94, 23)
 		Me.SignupButton.TabIndex = 5
@@ -137,7 +138,7 @@ Partial Class SignUpForm
 		'
 		Me.ConfirmPasswordTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder
 		Me.ConfirmPasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-		Me.ConfirmPasswordTextBox.Location = New System.Drawing.Point(173, 164)
+		Me.ConfirmPasswordTextBox.Location = New System.Drawing.Point(196, 164)
 		Me.ConfirmPasswordTextBox.Name = "ConfirmPasswordTextBox"
 		Me.ConfirmPasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
 		Me.ConfirmPasswordTextBox.Size = New System.Drawing.Size(220, 20)
@@ -148,7 +149,7 @@ Partial Class SignUpForm
 		'
 		Me.PasswordTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder
 		Me.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-		Me.PasswordTextBox.Location = New System.Drawing.Point(173, 120)
+		Me.PasswordTextBox.Location = New System.Drawing.Point(196, 120)
 		Me.PasswordTextBox.Name = "PasswordTextBox"
 		Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
 		Me.PasswordTextBox.Size = New System.Drawing.Size(220, 20)
@@ -159,14 +160,14 @@ Partial Class SignUpForm
 		'
 		Me.FullnameTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder
 		Me.FullnameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-		Me.FullnameTextBox.Location = New System.Drawing.Point(173, 76)
+		Me.FullnameTextBox.Location = New System.Drawing.Point(196, 76)
 		Me.FullnameTextBox.Name = "FullnameTextBox"
 		Me.FullnameTextBox.Size = New System.Drawing.Size(220, 20)
 		Me.FullnameTextBox.TabIndex = 1
 		'
 		'Label3
 		'
-		Me.Label3.Location = New System.Drawing.Point(170, 143)
+		Me.Label3.Location = New System.Drawing.Point(193, 143)
 		Me.Label3.Name = "Label3"
 		Me.Label3.Size = New System.Drawing.Size(220, 23)
 		Me.Label3.TabIndex = 10
@@ -175,7 +176,7 @@ Partial Class SignUpForm
 		'
 		'Label5
 		'
-		Me.Label5.Location = New System.Drawing.Point(170, 99)
+		Me.Label5.Location = New System.Drawing.Point(193, 99)
 		Me.Label5.Name = "Label5"
 		Me.Label5.Size = New System.Drawing.Size(220, 23)
 		Me.Label5.TabIndex = 9
@@ -184,7 +185,7 @@ Partial Class SignUpForm
 		'
 		'Label1
 		'
-		Me.Label1.Location = New System.Drawing.Point(170, 55)
+		Me.Label1.Location = New System.Drawing.Point(193, 55)
 		Me.Label1.Name = "Label1"
 		Me.Label1.Size = New System.Drawing.Size(220, 23)
 		Me.Label1.TabIndex = 8
@@ -193,7 +194,7 @@ Partial Class SignUpForm
 		'
 		'Label4
 		'
-		Me.Label4.Location = New System.Drawing.Point(170, 11)
+		Me.Label4.Location = New System.Drawing.Point(193, 11)
 		Me.Label4.Name = "Label4"
 		Me.Label4.Size = New System.Drawing.Size(220, 23)
 		Me.Label4.TabIndex = 7
@@ -204,7 +205,7 @@ Partial Class SignUpForm
 		'
 		Me.UsernameTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder
 		Me.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-		Me.UsernameTextBox.Location = New System.Drawing.Point(173, 32)
+		Me.UsernameTextBox.Location = New System.Drawing.Point(196, 32)
 		Me.UsernameTextBox.Name = "UsernameTextBox"
 		Me.UsernameTextBox.Size = New System.Drawing.Size(220, 20)
 		Me.UsernameTextBox.TabIndex = 0
@@ -215,7 +216,7 @@ Partial Class SignUpForm
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.SystemColors.ControlDark
-		Me.ClientSize = New System.Drawing.Size(401, 254)
+		Me.ClientSize = New System.Drawing.Size(428, 254)
 		Me.Controls.Add(Me.DropDownButton)
 		Me.Controls.Add(Me.Label2)
 		Me.Controls.Add(Me.CancelBtn)
