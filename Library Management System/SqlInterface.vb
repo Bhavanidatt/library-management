@@ -19,8 +19,8 @@ Public Class SqlInterface
 			con.Open()
 			With cmd
 				.Connection = con
-				.CommandText = "SELECT * FROM user WHERE email ='" & GLogin.Username & "'"
-			End With
+                .CommandText = "SELECT * FROM user WHERE BINARY email ='" & GLogin.Username & "'"
+            End With
 			'FILLING THE DATA IN A SPICIFIC TABLE OF THE DATABASE
 			da.SelectCommand = cmd
 			dt = New DataTable
@@ -58,33 +58,113 @@ Public Class SqlInterface
 	End Function
 
 
-	Public Shared Function Register() As Boolean
-		' Function will return status of query ( because we may need it in our parent form)
-		Try
-			'OPENING THE CONNECTION
-			con.Open()
-			'HOLDS THE DATA TO BE EXECUTED
+    Public Shared Function Register() As Boolean
+        ' Function will return status of query ( because we may need it in our parent form)
+        Try
+            'OPENING THE CONNECTION
+            con.Open()
+            'HOLDS THE DATA TO BE EXECUTED
 
 
-			cmd.Connection = con
-			cmd.CommandText = "INSERT INTO user( name,email, pass,status,booksissued,due, salt)" & "VALUES ('" & GLogin.Fullname & "','" & GLogin.Username & "','" & GLogin.PasswordHash & "','" & GLogin.AccType & "',0,0,'" & GLogin.Salt & "')"
+            cmd.Connection = con
+            cmd.CommandText = "INSERT INTO user( name,email, pass,status,booksissued,due, salt)" & "VALUES ('" & GLogin.Fullname & "','" & GLogin.Username & "','" & GLogin.PasswordHash & "','" & GLogin.AccType & "',0,0,'" & GLogin.Salt & "')"
 
-			'EXECUTE THE DATA
-			result = cmd.ExecuteNonQuery
-			'CHECKING IF THE DATA HAS BEEN EXECUTED OR NOT
-			If result > 0 Then
-				MsgBox("User has been registered.")
-			Else
-				MsgBox("Failed to register the user.")
-			End If
-			con.Close()
-		Catch ex As Exception
-			MsgBox(ex.Message)
-		End Try
-		If result > 0 Then
-			Return True
-		Else
-			Return False
-		End If
-	End Function
+            'EXECUTE THE DATA
+            result = cmd.ExecuteNonQuery
+            'CHECKING IF THE DATA HAS BEEN EXECUTED OR NOT
+            If result > 0 Then
+                MsgBox("User has been registered.")
+            Else
+                MsgBox("Failed to register the user.")
+            End If
+            con.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        If result > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    Public Shared Function Changeusername(ByVal newusername As String) As Boolean
+        Try
+            con.Open()
+            With cmd
+                .Connection = con
+                .CommandText = "UPDATE user SET email ='" & newusername & "' where email='" & GLogin.Username & "'"
+            End With
+
+            result = cmd.ExecuteNonQuery
+            If result = 1 Then
+                con.Close()
+                GLogin.Username = newusername
+                Return True
+            Else
+                Return False
+            End If
+
+            'FILLING THE DATA IN A SPICIFIC TABLE OF THE DATABASE
+
+        Catch ex As MySqlException
+            MsgBox(ex.Message)
+            Return False
+        End Try
+    End Function
+
+
+    Public Shared Function Changefullname(ByVal newfullname As String) As Boolean
+        Try
+            con.Open()
+            With cmd
+                .Connection = con
+                .CommandText = "UPDATE user SET Name ='" & newfullname & "' where email='" & GLogin.Username & "'"
+            End With
+
+            result = cmd.ExecuteNonQuery
+            If result = 1 Then
+                con.Close()
+                GLogin.Fullname = newfullname
+                Return True
+            Else
+                Return False
+            End If
+
+            'FILLING THE DATA IN A SPICIFIC TABLE OF THE DATABASE
+
+        Catch ex As MySqlException
+            MsgBox(ex.Message)
+            Return False
+        End Try
+    End Function
+
+
+    Public Shared Function Changestatus(ByVal newstatus As String) As Boolean
+        Try
+            con.Open()
+            With cmd
+                .Connection = con
+                .CommandText = "UPDATE user SET Status ='" & newstatus & "' where email='" & GLogin.Username & "'"
+            End With
+
+            result = cmd.ExecuteNonQuery
+            If result = 1 Then
+                con.Close()
+                GLogin.AccType = newstatus
+                Return True
+            Else
+                Return False
+            End If
+
+            'FILLING THE DATA IN A SPICIFIC TABLE OF THE DATABASE
+
+        Catch ex As MySqlException
+            MsgBox(ex.Message)
+            Return False
+        End Try
+    End Function
+
+
+
 End Class

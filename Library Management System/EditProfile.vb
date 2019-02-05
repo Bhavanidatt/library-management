@@ -1,7 +1,8 @@
 Public Class EditProfileForm
-	Private Shared DropDownActive As Boolean = False
+    Private Shared DropDownActive As Boolean = False
+    Dim editstring As String = ""
 
-	Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 		Me.Close()
 	End Sub
 
@@ -20,8 +21,8 @@ Public Class EditProfileForm
 	End Sub
 
 	Private Sub EditProfileForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-		StudentAcc.Checked = True
-		TeacherAcc.Checked = False
+        StudentAcc.Checked = False
+        TeacherAcc.Checked = False
 		AdminAcc.Checked = False
 		UsernameTextBox.Text = ""
 		FullnameTextBox.Text = ""
@@ -35,8 +36,16 @@ Public Class EditProfileForm
 		End If
 		UsernameTextBox.Text = GLogin.Username
 		FullnameTextBox.Text = GLogin.Fullname
-		DropDownButton.Text = GLogin.AccType
-	End Sub
+        DropDownButton.Text = GLogin.AccType
+        If GLogin.AccType = "Student" Then
+            StudentAcc.Checked = True
+        ElseIf GLogin.AccType = "Teacher" Then
+            TeacherAcc.Checked = True
+        Else
+            AdminAcc.Checked = True
+        End If
+
+    End Sub
 
 	Private Sub EditProfileButton_Click(sender As Object, e As EventArgs) Handles EditProfileButton.Click
 		' TODO: Update row to reflect change in profile
@@ -55,28 +64,45 @@ Public Class EditProfileForm
 					Exit Sub
 				End If
 			Next
-			' change username here
-		End If
-		If FullnameTextBox.Text <> GLogin.Fullname Then
-			For Each C As Char In FullnameTextBox.Text
-				If AscW(C) >= AscW("a") AndAlso AscW("z") >= AscW(C) Then
-					Continue For
-				ElseIf AscW(C) >= AscW("A") AndAlso AscW("Z") >= AscW(C) Then
-					Continue For
-				ElseIf AscW(C) = AscW(" ") Then
-					Continue For
-				Else
-					MessageBox.Show("Invalid Characters in Name", "Use only alphanumerics( a-z or A-Z ) or Space", MessageBoxButtons.OK, MessageBoxIcon.Error)
-					GLogin.LogOut()
-					Exit Sub
-				End If
-			Next
-			' change fulllname here
-		End If
-		If DropDownButton.Text <> GLogin.AccType Then
-			' change acc type here
-		End If
-	End Sub
+            ' change username here
+
+            If SqlInterface.Changeusername(UsernameTextBox.Text) = False Then
+                MessageBox.Show("please enter a valid username", "error 1")
+            Else
+
+            End If
+
+        End If
+        If FullnameTextBox.Text <> GLogin.Fullname Then
+            For Each C As Char In FullnameTextBox.Text
+                If AscW(C) >= AscW("a") AndAlso AscW("z") >= AscW(C) Then
+                    Continue For
+                ElseIf AscW(C) >= AscW("A") AndAlso AscW("Z") >= AscW(C) Then
+                    Continue For
+                ElseIf AscW(C) = AscW(" ") Then
+                    Continue For
+                Else
+                    MessageBox.Show("Invalid Characters in Name", "Use only alphanumerics( a-z or A-Z ) or Space", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    GLogin.LogOut()
+                    Exit Sub
+                End If
+            Next
+            ' change fulllname here
+            If SqlInterface.Changefullname(FullnameTextBox.Text) = False Then
+                MessageBox.Show("Enter a valid Name", "Invalid Name")
+            Else
+
+            End If
+
+        End If
+
+        If DropDownButton.Text <> GLogin.AccType Then
+            ' change acc type here
+            SqlInterface.Changestatus(DropDownButton.Text)
+        End If
+
+
+    End Sub
 
 	Private Sub ChangePasswordButton_Click(sender As Object, e As EventArgs) Handles ChangePasswordButton.Click
 		If True Then ' check old password here
