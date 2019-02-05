@@ -26,8 +26,8 @@ Module SHA512
 		For Each b As Byte In bytes
 			GLogin.Salt = GLogin.Salt + Chars.ElementAt(b Mod 64).ToString
 		Next
-		Return Encrypt_Sha512(GLogin.Salt + PasswordHash + "Group 2")
-	End Function
+        Return Encrypt_Sha512(GLogin.Salt + PasswordHash + "d5eba9b008f69bd56e")
+    End Function
 
 	Public Function CheckOldPassword(ByVal PasswordHash As String) As String
 		If GLogin.LoggedIn = True Then

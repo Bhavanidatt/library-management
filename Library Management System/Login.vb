@@ -23,13 +23,13 @@ Public Class LoginForm
 				Exit Sub
 			End If
 		Next
-		If Len(UsernameTextBox.Text.Trim) < 6 Then
-			MessageBox.Show("Use atleast 6 digit username", "Username too short", MessageBoxButtons.OK, MessageBoxIcon.Error)
-			GLogin.LogOut()
-			Exit Sub
-		End If
+        If Len(UsernameTextBox.Text.Trim) < 5 Then
+            MessageBox.Show("Use atleast 5 digit username", "Username too short", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            GLogin.LogOut()
+            Exit Sub
+        End If
 
-		GLogin.LogOut()
+        GLogin.LogOut()
 		GLogin.Username = UsernameTextBox.Text
 		GLogin.UnhashedPassword = PasswordTextBox.Text 'CheckOldPassword(PasswordTextBox.Text)
 
