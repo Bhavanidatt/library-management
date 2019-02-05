@@ -30,15 +30,14 @@ Public Class SqlInterface
 			'CHECKING IF THE DATA IS EXIST IN THE ROW OF THE TABLE
 
 			If maxrow = 1 Then
-                'GLogin.LoggedIn = True
-                GLogin.Fullname = dt.Rows(0).Item(1).ToString()
-				GLogin.PasswordHash = dt.Rows(0).Item(3).ToString()
-				GLogin.AccType = dt.Rows(0).Item(4).ToString()
-				GLogin.lib_id = Integer.Parse(dt.Rows(0).Item(0).ToString())
-				GLogin.BooksIssued = Integer.Parse(dt.Rows(0).Item(5).ToString())
-				GLogin.Due = Integer.Parse(dt.Rows(0).Item(6).ToString())
-                GLogin.Salt = dt.Rows(0).Item(7).ToString()
-            Else
+				'GLogin.LoggedIn = True
+				GLogin.Fullname = dt.Rows(0).Item(0).ToString()
+				GLogin.PasswordHash = dt.Rows(0).Item(2).ToString()
+				GLogin.AccType = dt.Rows(0).Item(3).ToString()
+				GLogin.BooksIssued = Integer.Parse(dt.Rows(0).Item(4).ToString())
+				GLogin.Due = Integer.Parse(dt.Rows(0).Item(5).ToString())
+				GLogin.Salt = dt.Rows(0).Item(6).ToString()
+			Else
 				GLogin.LogOut()
 				con.Close()
 				Return False
@@ -47,13 +46,13 @@ Public Class SqlInterface
 			MsgBox(ex.Message)
 		End Try
 		con.Close()
-        Dim temp As String = CheckOldPassword(GLogin.UnhashedPassword)
-        Console.WriteLine(temp)
-        Console.WriteLine(GLogin.PasswordHash)
-        If temp = GLogin.PasswordHash Then
-            GLogin.LoggedIn = True
-        Else
-            GLogin.LogOut()
+		Dim temp As String = CheckOldPassword(GLogin.UnhashedPassword)
+		Console.WriteLine(temp)
+		Console.WriteLine(GLogin.PasswordHash)
+		If temp = GLogin.PasswordHash Then
+			GLogin.LoggedIn = True
+		Else
+			GLogin.LogOut()
 		End If
 		Return GLogin.LoggedIn
 	End Function

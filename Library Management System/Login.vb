@@ -35,7 +35,7 @@ Public Class LoginForm
 
 
 		If SqlInterface.Login() = True Then
-			MessageBox.Show("You have successfully logged in as" + GLogin.Fullname, "Logged In", MessageBoxButtons.OK, MessageBoxIcon.Information)
+			MessageBox.Show("You have successfully logged in as " + GLogin.Fullname, "Logged In", MessageBoxButtons.OK, MessageBoxIcon.Information)
 			Me.Close()
 		Else
 			MessageBox.Show("Incorrect Username/Password", "Username and Password do not match", MessageBoxButtons.OK, MessageBoxIcon.Error)

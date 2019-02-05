@@ -81,6 +81,9 @@ Public Class SignUpForm
 	End Sub
 
 	Private Sub SignUpForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+		StudentAcc.Checked = True
+		TeacherAcc.Checked = False
+		AdminAcc.Checked = False
 		UsernameTextBox.Text = ""
 		PasswordTextBox.Text = ""
 		FullnameTextBox.Text = ""

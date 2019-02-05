@@ -20,6 +20,9 @@ Public Class EditProfileForm
 	End Sub
 
 	Private Sub EditProfileForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+		StudentAcc.Checked = True
+		TeacherAcc.Checked = False
+		AdminAcc.Checked = False
 		UsernameTextBox.Text = ""
 		FullnameTextBox.Text = ""
 		OldPasswordTextBox.Text = ""
@@ -92,6 +95,28 @@ Public Class EditProfileForm
 
 		End If
 	End Sub
+
+	Private Sub StudentAcc_Click(sender As Object, e As EventArgs) Handles StudentAcc.Click
+		DropDownButton.Text = "Student"
+		StudentAcc.Checked = True
+		TeacherAcc.Checked = False
+		AdminAcc.Checked = False
+	End Sub
+
+	Private Sub TeacherAcc_Click(sender As Object, e As EventArgs) Handles TeacherAcc.Click
+		DropDownButton.Text = "Teacher"
+		StudentAcc.Checked = False
+		TeacherAcc.Checked = True
+		AdminAcc.Checked = False
+	End Sub
+
+	Private Sub AdminAcc_Click(sender As Object, e As EventArgs) Handles AdminAcc.Click
+		DropDownButton.Text = "Admin"
+		StudentAcc.Checked = False
+		TeacherAcc.Checked = False
+		AdminAcc.Checked = True
+	End Sub
+
 
 	Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
 		MyBase.Close()
