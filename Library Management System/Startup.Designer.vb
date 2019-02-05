@@ -26,7 +26,7 @@ Partial Class StartupForm
 		Me.BrowseBooksButton = New System.Windows.Forms.Button()
 		Me.IssueBookButton = New System.Windows.Forms.Button()
 		Me.ReturnBookButton = New System.Windows.Forms.Button()
-		Me.LogoutButton = New System.Windows.Forms.Button()
+		Me.LoginButton = New System.Windows.Forms.Button()
 		Me.SuspendLayout()
 		'
 		'SearchBooksButton
@@ -73,16 +73,16 @@ Partial Class StartupForm
 		Me.ReturnBookButton.Text = "&Return Books"
 		Me.ReturnBookButton.UseVisualStyleBackColor = False
 		'
-		'LogoutButton
+		'LoginButton
 		'
-		Me.LogoutButton.BackColor = System.Drawing.SystemColors.ActiveBorder
-		Me.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.LogoutButton.Location = New System.Drawing.Point(77, 68)
-		Me.LogoutButton.Name = "LogoutButton"
-		Me.LogoutButton.Size = New System.Drawing.Size(127, 23)
-		Me.LogoutButton.TabIndex = 4
-		Me.LogoutButton.Text = "&Login"
-		Me.LogoutButton.UseVisualStyleBackColor = False
+		Me.LoginButton.BackColor = System.Drawing.SystemColors.ActiveBorder
+		Me.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.LoginButton.Location = New System.Drawing.Point(77, 68)
+		Me.LoginButton.Name = "LoginButton"
+		Me.LoginButton.Size = New System.Drawing.Size(127, 23)
+		Me.LoginButton.TabIndex = 4
+		Me.LoginButton.Text = "&Login"
+		Me.LoginButton.UseVisualStyleBackColor = False
 		'
 		'StartupForm
 		'
@@ -90,7 +90,7 @@ Partial Class StartupForm
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
 		Me.ClientSize = New System.Drawing.Size(282, 100)
-		Me.Controls.Add(Me.LogoutButton)
+		Me.Controls.Add(Me.LoginButton)
 		Me.Controls.Add(Me.ReturnBookButton)
 		Me.Controls.Add(Me.SearchBooksButton)
 		Me.Controls.Add(Me.BrowseBooksButton)
@@ -105,5 +105,5 @@ Partial Class StartupForm
 	Friend WithEvents BrowseBooksButton As Button
 	Friend WithEvents IssueBookButton As Button
 	Friend WithEvents ReturnBookButton As Button
-	Friend WithEvents LogoutButton As Button
+	Friend WithEvents LoginButton As Button
 End Class

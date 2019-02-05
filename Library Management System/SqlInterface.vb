@@ -1,8 +1,4 @@
 ﻿Imports MySql.Data.MySqlClient
-' I (Avneet) don't have mysql installed. So, Parvindar and Sachin have to do all backend testing.
-' Currently, one of the bugs I could find was SQL Injection in password.
-' To solve this vulnerability, I am thinking of hashing the password.
-' This will also safeguard user pass against thefts.
 Public Class SqlInterface
 
 	Public Shared con As MySqlConnection = New MySqlConnection("server=localhost; user id=root; password=root; database=library_management")
@@ -32,8 +28,7 @@ Public Class SqlInterface
 			'DECLARING AN INTEGER TO SET THE MAXROWS OF THE TABLE
 			Dim maxrow As Integer = dt.Rows.Count
 			'CHECKING IF THE DATA IS EXIST IN THE ROW OF THE TABLE
-			If maxrow > 0 Then
-				GLogin.LoggedIn = True
+			If maxrow = 1 Then
 				GLogin.Fullname = dt.Rows(0).Item(1).ToString()
 				GLogin.PasswordHash = dt.Rows(0).Item(3).ToString()
 				GLogin.AccType = dt.Rows(0).Item(4).ToString()
@@ -43,6 +38,8 @@ Public Class SqlInterface
 				GLogin.Salt = dt.Rows(0).Item(7).ToString()
 			Else
 				GLogin.LogOut()
+				con.Close()
+				Return False
 			End If
 		Catch ex As Exception
 			MsgBox(ex.Message)
